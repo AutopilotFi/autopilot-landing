@@ -254,7 +254,7 @@ export default function About() {
                         Autopilot delivers higher yield potential than any standalone Morpho vault via high-frequency, automated rebalancing.
                       </p>
                       <p>
-                        It also provides a simple, single entry point to Morpho's broad range of curated vaults.
+                        It also provides a simple, single entry point to Morpho&apos; broad range of curated vaults.
                       </p>
                       <p>
                         This combination enables optimized allocation without the need to monitor rates or manage multiple positions.
@@ -295,7 +295,7 @@ export default function About() {
                     </h2>
                     <div className="space-y-4 text-lg text-gray-700 leading-relaxed">
                       <p>
-                        Autopilot's rebalancing setup continuously monitors Morpho vaults and reallocates liquidity to maintain the most favorable setup at any given time.
+                        Autopilot&apos; rebalancing setup continuously monitors Morpho vaults and reallocates liquidity to maintain the most favorable setup at any given time.
                       </p>
                       <div className="flex items-start">
                         <CheckCircle className="w-5 h-5 mr-3 mt-0.5 text-[#22c55e] flex-shrink-0" />
@@ -345,7 +345,7 @@ export default function About() {
                         Autopilot harvests all yield sources associated with its allocations, including manually claimable rewards, points programs, and lending interest.
                       </p>
                       <p>
-                        All harvested amounts are automatically converted and compounded back into the Autopilot's default token, such as USDC or WETH, increasing the overall position size over time.
+                        All harvested amounts are automatically converted and compounded back into the Autopilot&apos; default token, such as USDC or WETH, increasing the overall position size over time.
                       </p>
                     </div>
                   </div>
@@ -365,7 +365,7 @@ export default function About() {
                     </h2>
                     <div className="space-y-4 text-lg text-gray-700 leading-relaxed">
                       <p>
-                        Autopilot's initial Morpho-focused product line is limited to vaults covered under OpenCover's Morpho Vaults Cover Annex.
+                        Autopilot&apos; initial Morpho-focused product line is limited to vaults covered under OpenCover&apos; Morpho Vaults Cover Annex.
                       </p>
                       <p>
                         This ensures that all integrated vaults meet a predefined security and eligibility standard.
@@ -382,21 +382,21 @@ export default function About() {
                         <div className="space-y-3">
                           <div className="flex items-start">
                             <CheckCircle className="w-5 h-5 mr-3 mt-0.5 text-[#22c55e] flex-shrink-0" />
-                            <span>Monitor OpenCover's Morpho Vaults Cover Annex for new vault additions</span>
+                            <span>Monitor OpenCover&apos; Morpho Vaults Cover Annex for new vault additions</span>
                           </div>
                           <div className="flex items-start">
                             <CheckCircle className="w-5 h-5 mr-3 mt-0.5 text-[#22c55e] flex-shrink-0" />
-                            <span>Evaluate the new vault's yield potential, liquidity depth, and compatibility with Autopilot strategies</span>
+                            <span>Evaluate the new vault&apos; yield potential, liquidity depth, and compatibility with Autopilot strategies</span>
                           </div>
                           <div className="flex items-start">
                             <CheckCircle className="w-5 h-5 mr-3 mt-0.5 text-[#22c55e] flex-shrink-0" />
-                            <span>If approved, connect it to Autopilot's rebalancing engine for automated allocation</span>
+                            <span>If approved, connect it to Autopilot&apos; rebalancing engine for automated allocation</span>
                           </div>
                         </div>
                       </div>
 
                       <div className="mt-6 p-4 bg-blue-50 rounded-xl border border-blue-200">
-                        <p className="text-blue-900 font-medium mb-2">View OpenCover's Morpho Vaults Cover Annex</p>
+                        <p className="text-blue-900 font-medium mb-2">View OpenCover&apos; Morpho Vaults Cover Annex</p>
                         <a
                           href="https://api.nexusmutual.io/ipfs/Qmd7cbiW228KWZK6tywaoMcaMKWYHT6i4qrnHRmWNfWVDD"
                           target="_blank"
@@ -430,7 +430,7 @@ export default function About() {
                       </div>
                       <div className="flex items-start">
                         <CheckCircle className="w-5 h-5 mr-3 mt-0.5 text-[#22c55e] flex-shrink-0" />
-                        <span>Single, simple entry point to Morpho's broad range of curated vaults</span>
+                        <span>Single, simple entry point to Morpho&apos; broad range of curated vaults</span>
                       </div>
                       <div className="flex items-start">
                         <CheckCircle className="w-5 h-5 mr-3 mt-0.5 text-[#22c55e] flex-shrink-0" />
@@ -470,10 +470,10 @@ export default function About() {
                         . This technology is currently regarded as one of the most advanced solutions for optimised asset allocation in DeFi.
                       </p>
                       <p>
-                        [Harvest Foundation] integrates IPOR's rebalancing technology in parallel with its own auto-compounding vault infrastructure to create Autopilot's allocation setups.
+                        [Harvest Foundation] integrates IPOR&apos; rebalancing technology in parallel with its own auto-compounding vault infrastructure to create Autopilot&apos; allocation setups.
                       </p>
                       <p>
-                        Harvest's core vault infrastructure underwent a comprehensive audit by Halborn in January 2025. The audit report is available{' '}
+                        Harvest&apos; core vault infrastructure underwent a comprehensive audit by Halborn in January 2025. The audit report is available{' '}
                         <a
                           href="https://www.halborn.com/audits/harvest-finance/harvest-strategy-base"
                           target="_blank"
@@ -596,7 +596,7 @@ export default function About() {
                             <h2 className="text-xl font-semibold text-gray-900 mb-4">3. How We Use Information</h2>
                             <p className="text-gray-700 leading-relaxed mb-4">We use the information we collect to:</p>
                             <ul className="list-disc list-inside space-y-2 text-gray-700 ml-4 mb-4">
-                              <li>Operate and maintain Autopilot's interface and allocation engine.</li>
+                              <li>Operate and maintain Autopilot&apos; interface and allocation engine.</li>
                               <li>Diagnose and fix technical issues.</li>
                               <li>Analyse usage patterns to improve stability and user experience.</li>
                               <li>Comply with applicable legal obligations.</li>
@@ -639,7 +639,7 @@ export default function About() {
                               We implement reasonable security measures to protect information from loss, theft, misuse, and unauthorised access. However, no security measure can guarantee absolute protection, especially for public blockchain transactions.
                             </p>
                             <p className="text-gray-700 leading-relaxed">
-                              You are solely responsible for ensuring that you are accessing the genuine Autopilot interface at autopilot.finance or its official subdomains. Autopilot's interface could be subject to hacking, phishing, DNS hijacking, spoofing, or other malicious interference. Interacting through a compromised or fraudulent interface may result in total and unrecoverable loss of assets or data.
+                              You are solely responsible for ensuring that you are accessing the genuine Autopilot interface at autopilot.finance or its official subdomains. Autopilot&apos; interface could be subject to hacking, phishing, DNS hijacking, spoofing, or other malicious interference. Interacting through a compromised or fraudulent interface may result in total and unrecoverable loss of assets or data.
                             </p>
                           </section>
 
@@ -667,7 +667,7 @@ export default function About() {
                           <section>
                             <h2 className="text-xl font-semibold text-gray-900 mb-4">11. Successor Operator</h2>
                             <p className="text-gray-700 leading-relaxed">
-                              If the operation of Autopilot is transferred from [Harvest Foundation] to a successor operator, your continued use after notice of such transfer constitutes your acceptance of the successor's privacy policy, provided it does not materially diminish your rights or increase your obligations without your affirmative consent.
+                              If the operation of Autopilot is transferred from [Harvest Foundation] to a successor operator, your continued use after notice of such transfer constitutes your acceptance of the successor&apos; privacy policy, provided it does not materially diminish your rights or increase your obligations without your affirmative consent.
                             </p>
                           </section>
 
@@ -821,7 +821,7 @@ export default function About() {
                           <section>
                             <h2 className="text-xl font-semibold text-gray-900 mb-4">8. Intellectual Property</h2>
                             <p className="text-gray-700 leading-relaxed">
-                              All intellectual property in Autopilot's website, branding, and user interface is owned by or licensed to [Harvest Foundation]. You may not copy, modify, or distribute our materials without written consent.
+                              All intellectual property in Autopilot&apos; website, branding, and user interface is owned by or licensed to [Harvest Foundation]. You may not copy, modify, or distribute our materials without written consent.
                             </p>
                           </section>
 
@@ -876,7 +876,7 @@ export default function About() {
                           <section>
                             <h2 className="text-xl font-semibold text-gray-900 mb-4">14. Successor Operator</h2>
                             <p className="text-gray-700 leading-relaxed">
-                              If the operation of Autopilot is transferred from [Harvest Foundation] to a successor operator, your continued use of Autopilot after notice of such transfer constitutes your acceptance of the successor operator's Terms of Use.
+                              If the operation of Autopilot is transferred from [Harvest Foundation] to a successor operator, your continued use of Autopilot after notice of such transfer constitutes your acceptance of the successor operator&apos; Terms of Use.
                             </p>
                           </section>
 
@@ -971,12 +971,12 @@ export default function About() {
 
                             <h3 className="text-lg font-medium text-gray-900 mb-3">4.1 Smart contract vulnerabilities</h3>
                             <p className="text-gray-700 leading-relaxed mb-4">
-                              Even if audited, smart contracts in Autopilot's stack — including Harvest vaults, IPOR contracts, Morpho vaults, and other integrations — may contain exploitable bugs or logic errors.
+                              Even if audited, smart contracts in Autopilot&apos; stack — including Harvest vaults, IPOR contracts, Morpho vaults, and other integrations — may contain exploitable bugs or logic errors.
                             </p>
 
                             <h3 className="text-lg font-medium text-gray-900 mb-3">4.2 Third-party protocol risks</h3>
                             <p className="text-gray-700 leading-relaxed mb-4">
-                              Integrated protocols such as Morpho may change parameters, suspend vaults, freeze withdrawals, alter fee structures, or otherwise restrict access without notice. These changes are outside [Harvest Foundation]'s control.
+                              Integrated protocols such as Morpho may change parameters, suspend vaults, freeze withdrawals, alter fee structures, or otherwise restrict access without notice. These changes are outside [Harvest Foundation]&apos; control.
                             </p>
 
                             <h3 className="text-lg font-medium text-gray-900 mb-3">4.3 Cyberattacks and interface security</h3>
@@ -998,7 +998,7 @@ export default function About() {
 
                             <h3 className="text-lg font-medium text-gray-900 mb-3">5.2 Allocation logic dependencies</h3>
                             <p className="text-gray-700 leading-relaxed mb-4">
-                              Autopilot's performance relies on timely and accurate data from IPOR Technology, Harvest, Morpho, and other sources. Delays, errors, manipulation, or unavailability of these inputs can lead to suboptimal or harmful allocations.
+                              Autopilot&apos; performance relies on timely and accurate data from IPOR Technology, Harvest, Morpho, and other sources. Delays, errors, manipulation, or unavailability of these inputs can lead to suboptimal or harmful allocations.
                             </p>
 
                             <h3 className="text-lg font-medium text-gray-900 mb-3">5.3 Emerging technology risks</h3>
@@ -1017,7 +1017,7 @@ export default function About() {
 
                             <h3 className="text-lg font-medium text-gray-900 mb-3">6.2 Auto-compounding risks</h3>
                             <p className="text-gray-700 leading-relaxed mb-4">
-                              Harvest's auto-compounding vaults or any other integrated auto-compounding solutions depend on scheduled "harvest" transactions to mechanically accrue and compound yield. Network congestion, failed transactions, or changes to underlying strategies in any of these systems may reduce expected performance.
+                              Harvest&apos; auto-compounding vaults or any other integrated auto-compounding solutions depend on scheduled "harvest" transactions to mechanically accrue and compound yield. Network congestion, failed transactions, or changes to underlying strategies in any of these systems may reduce expected performance.
                             </p>
 
                             <h3 className="text-lg font-medium text-gray-900 mb-3">6.3 Morpho vault risks</h3>
@@ -1106,7 +1106,7 @@ export default function About() {
                           <section>
                             <h2 className="text-xl font-semibold text-gray-900 mb-4">13. Successor Operator</h2>
                             <p className="text-gray-700 leading-relaxed">
-                              If the operation of Autopilot is transferred from [Harvest Foundation] to a successor operator, your continued use after notice of such transfer constitutes your acceptance of the successor's terms, provided they do not materially diminish your rights or increase your obligations without your affirmative consent.
+                              If the operation of Autopilot is transferred from [Harvest Foundation] to a successor operator, your continued use after notice of such transfer constitutes your acceptance of the successor&apos; terms, provided they do not materially diminish your rights or increase your obligations without your affirmative consent.
                             </p>
                           </section>
 
