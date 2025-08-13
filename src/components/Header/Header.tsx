@@ -2,8 +2,11 @@
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
-export default function Header() {
+export default function Header({disableNavLinks}: {
+  disableNavLinks?: boolean
+}) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const toggleMobileMenu = () => {
@@ -14,17 +17,20 @@ export default function Header() {
     <header className="absolute top-0 z-50 w-full">
       <nav className="flex w-full justify-between max-w-7xl mx-auto h-20 items-center px-4 sm:px-6 lg:px-8">
         {/* Logo */}
-        <button
-        //   onClick={onNavigateHome}
+        <Link
+          href="/"
           className="flex items-center justify-between hover:opacity-80 transition-opacity"
         >
             <Image src="/logo.svg" width={137} height={52} alt="Autopilot" className="h-8 w-auto"/>
-        </button>
+        </Link>
 
-        <div className="hidden md:flex gap-5 font-bold text-white">
-          <span>About</span>
-          <span>Security</span>
-        </div>
+        {
+          !disableNavLinks &&
+          <div className="hidden md:flex gap-5 font-bold">
+            <Link className="text-white" href="/about">About</Link>
+            <span className="text-white">Security</span>
+          </div>
+        }
 
         {/* Desktop CTA */}
         <div className="hidden md:block">

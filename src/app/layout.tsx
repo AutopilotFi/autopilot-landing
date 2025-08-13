@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { preload } from "react-dom";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -22,6 +23,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  preload("/bg-gradient.png", { as: "image", fetchPriority: "high" });
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>

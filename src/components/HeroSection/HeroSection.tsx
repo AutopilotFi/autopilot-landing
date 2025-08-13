@@ -5,7 +5,10 @@ import Image from "next/image";
 export default function HeroSection() {
 
   return (
-    <section className="relative max-w-[1920px] mx-auto pt-32 pb-32 overflow-hidden bg-cover" style={{backgroundImage: "url('./bg-gradient.png')"}}>
+    <section
+      className="relative max-w-[1920px] mx-auto pt-32 pb-32 overflow-hidden bg-cover"
+      style={{backgroundImage: "url('./bg-gradient.png')"}}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Column - Hero Content */}

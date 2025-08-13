@@ -1,5 +1,6 @@
 import { Github, Twitter, BookOpen, FileText } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 const DiscordIcon = () => (
   <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -59,9 +60,9 @@ export default function Footer() {
               <h4 className="font-medium mb-4">Resources</h4>
               <ul className="space-y-2 text-sm text-muted-foreground text-[#9159FF]">
                 <li>
-                  <a href="#docs" className="hover:text-foreground transition-colors flex items-center">
+                  <Link href="/about" className="hover:text-foreground transition-colors flex items-center">
                     About
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <a href="#support" className="hover:text-foreground transition-colors">Support</a>
