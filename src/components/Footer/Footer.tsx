@@ -9,7 +9,7 @@ const DiscordIcon = () => (
 
 export default function Footer() {
   return (
-    <footer className="bg-background">
+    <footer className="bg-background max-w-[1920px] mx-auto border-r border-l border-[#9159FF26]">
       <div className="container mx-auto px-4 py-12">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
