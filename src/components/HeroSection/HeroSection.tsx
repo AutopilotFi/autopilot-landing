@@ -5,18 +5,7 @@ import Image from "next/image";
 export default function HeroSection() {
 
   return (
-    <section className="relative bg-gradient-to-br from-purple-50 via-white to-blue-50 pt-32 pb-32 overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))] -z-10" />
-
-      {/* Subtle Dots Pattern */}
-      <div className="absolute inset-0 hero-dots-pattern -z-5" />
-
-      {/* Floating Elements */}
-      <div className="absolute top-20 left-10 w-20 h-20 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob" />
-      <div className="absolute top-40 right-10 w-20 h-20 bg-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000" />
-      <div className="absolute -bottom-8 left-20 w-20 h-20 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000" />
-
+    <section className="relative pt-32 pb-32 overflow-hidden bg-cover" style={{backgroundImage: "url('./bg-gradient.png')"}}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Column - Hero Content */}
@@ -29,14 +18,14 @@ export default function HeroSection() {
 
             {/* Main Headline */}
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-              <span className="text-gray-800">Autopilot for</span>
+              <span className="text-white">Autopilot for</span>
               <br />
-              <span className="text-[#9159FF]">Morpho Users</span>
+              <span className="text-[#9159FF]">Morpho Lenders</span>
 
             </h1>
 
             {/* Subheadline */}
-            <p className="text-xl text-gray-600 mb-8 max-w-lg mx-auto lg:mx-0">
+            <p className="text-xl text-[#CDCDCD] mb-8 max-w-lg mx-auto lg:mx-0">
               Supply once, and let Autopilot allocate to the best-performing Morpho vaults automatically.
             </p>
 
@@ -44,11 +33,11 @@ export default function HeroSection() {
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-8 mb-8 text-sm text-gray-600">
               <div className="flex items-center space-x-2">
                 <Shield className="w-5 h-5 text-[#9159FF]" />
-                <span>Audited & Secure</span>
+                <span className="text-[#9159FF]">Audited & Secure</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Zap className="w-5 h-5 text-[#9159FF]" />
-                <span>Auto-Rebalancing</span>
+                <span className="text-[#9159FF]">Auto-Rebalancing</span>
               </div>
             </div>
 
@@ -58,7 +47,7 @@ export default function HeroSection() {
                 // onClick={handleGetStarted}
                 className="inline-flex items-center px-8 py-4 bg-[#9159FF] hover:bg-[#7c3aed] text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
               >
-                Launch App
+                Launching Soon
                 <Image src="/launchIcon.png" width={17.5} height={17.5} alt="Launch Icon" className="ml-2 w-5 h-5" />
               </button>
 
@@ -75,28 +64,28 @@ export default function HeroSection() {
           {/* Right Column - APY Ranking Card */}
           <div className="flex justify-center lg:justify-end">
             <div className="bg-white rounded-2xl shadow-2xl p-8 w-full max-w-md border border-gray-100">
-              {/* Card Header */}
+              {/* Card Header
               <div className="text-center mb-8">
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">30-Day Average APY</h3>
-              </div>
+              </div> */}
 
               {/* Rankings List */}
               <div className="space-y-4">
                 {/* #1 Autopilot USDC */}
-                <div className="flex items-center justify-between p-4 bg-purple-50 rounded-xl border border-purple-200 relative">
+                <div className="flex items-center justify-between p-4 bg-purple-50 rounded-xl border border-purple-200 relative" style={{backgroundImage: "url('./bg-gradient.png')"}}>
                   <div className="absolute -top-2 -left-2 w-6 h-6 bg-[#9159FF] text-white rounded-full flex items-center justify-center text-xs font-bold">
                     1
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-2 h-2 bg-[#9159FF] rounded-full"></div>
                     <div>
-                      <div className="font-semibold text-gray-900">Autopilot USDC</div>
-                      <div className="text-xs text-gray-500">Smart Yield Router</div>
+                      <div className="font-semibold text-[#D1D5DC]">Autopilot USDC</div>
+                      <div className="text-xs text-[#ACACAC]">Auto-rebalancer</div>
                     </div>
                   </div>
                   <div className="text-right">
-                    <div className="text-xl font-bold text-[#9159FF]">9.03%</div>
-                    <div className="text-xs text-gray-500">APY</div>
+                    <div className="text-xl font-bold text-white">9.03%</div>
+                    <div className="text-xs text-white">APY</div>
                   </div>
                 </div>
 
@@ -158,9 +147,6 @@ export default function HeroSection() {
           </div>
         </div>
       </div>
-
-      {/* Bottom fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent" />
     </section>
   );
 }

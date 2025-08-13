@@ -16,7 +16,7 @@ export default function Footer() {
             {/* Brand */}
             <div className="md:col-span-1">
               <div className="flex items-center mb-4">
-                <Image src="/logo.png" width={172} height={35} alt="Autopilot" className="h-10 w-auto" />
+                <Image src="/logo.svg" width={172} height={35} alt="Autopilot" className="h-10 w-auto" />
               </div>
               <p className="text-muted-foreground text-sm mb-4 max-w-xs">
                 Automated yield optimization for Morpho vaults on Base. Maximize your DeFi returns effortlessly.

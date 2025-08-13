@@ -9,7 +9,7 @@ export default function Home() {
       <Header/>
       <main>
         <HeroSection/>
-        <AppPreview/>
+        {/* <AppPreview/> */}
       </main>
       <Footer/>
     </div>
