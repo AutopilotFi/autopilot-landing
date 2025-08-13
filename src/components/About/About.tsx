@@ -567,7 +567,7 @@ export default function About() {
                           <section>
                             <h2 className="text-xl font-semibold text-gray-900 mb-4">1. Introduction</h2>
                             <p className="text-gray-700 leading-relaxed mb-4">
-                              This Privacy Policy explains how [Harvest Foundation], and any future successor operator of the Autopilot Finance platform ("we," "us," or "our"), collects, uses, and protects information when you use Autopilot.
+                              This Privacy Policy explains how [Harvest Foundation], and any future successor operator of the Autopilot Finance platform (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;), collects, uses, and protects information when you use Autopilot.
                             </p>
                             <p className="text-gray-700 leading-relaxed mb-4">
                               Autopilot is available at autopilot.finance and any subdomains, related pages, interfaces, APIs, or applications operated by [Harvest Foundation] and, if applicable in the future, any successor operator.
@@ -714,10 +714,10 @@ export default function About() {
 
                             <h3 className="text-lg font-medium text-gray-900 mb-3">1.1 Welcome and Overview</h3>
                             <p className="text-gray-700 leading-relaxed mb-4">
-                              These Terms of Use ("Terms") govern your access to and use of the Autopilot Finance platform ("Autopilot"), available at autopilot.finance and any subdomains, related pages, interfaces, APIs, or applications operated by [Harvest Foundation] and, if applicable in the future, any successor operator ("Company," "we," "us," or "our").
+                              These Terms of Use ("Terms") govern your access to and use of the Autopilot Finance platform ("Autopilot"), available at autopilot.finance and any subdomains, related pages, interfaces, APIs, or applications operated by [Harvest Foundation] and, if applicable in the future, any successor operator (&quot;Company,&quot; &quot;we,&quot; &quot;us,&quot; or &quot;our&quot;).
                             </p>
                             <p className="text-gray-700 leading-relaxed mb-4">
-                              Autopilot is a non-custodial interface and allocation engine that automates the deployment of digital assets across decentralised finance ("DeFi") strategies, including Harvest Finance auto-compounding vaults, Morpho vaults, and other integrated protocols, using IPOR Technology (the rebalancing smart contract system and related software stack initially developed by IPOR Labs AG, including any modifications, upgrades, forks, or rebrands thereof, and any successor entity responsible for its operation) (collectively, the "Services").
+                              Autopilot is a non-custodial interface and allocation engine that automates the deployment of digital assets across decentralised finance ("DeFi") strategies, including Harvest Finance auto-compounding vaults, Morpho vaults, and other integrated protocols, using IPOR Technology (the rebalancing smart contract system and related software stack initially developed by IPOR Labs AG, including any modifications, upgrades, forks, or rebrands thereof, and any successor entity responsible for its operation) (collectively, the &quot;Services&quot;).
                             </p>
 
                             <h3 className="text-lg font-medium text-gray-900 mb-3">1.2 Binding Agreement</h3>
@@ -743,7 +743,7 @@ export default function About() {
 
                             <h3 className="text-lg font-medium text-gray-900 mb-3">3.1 No Financial Advice</h3>
                             <p className="text-gray-700 leading-relaxed mb-4">
-                              All information provided through Autopilot — including APYs, allocation logic, rankings, and other performance-related data — is for informational purposes only and does not constitute financial, legal, or tax advice. Statements such as "improved performance" or "optimized allocations" are descriptive of intended functionality only and are not guarantees of results.
+                              All information provided through Autopilot — including APYs, allocation logic, rankings, and other performance-related data — is for informational purposes only and does not constitute financial, legal, or tax advice. Statements such as &quot;improved performance&quot; or &quot;optimized allocations&quot; are descriptive of intended functionality only and are not guarantees of results.
                             </p>
 
                             <h3 className="text-lg font-medium text-gray-900 mb-3">3.2 Risks</h3>
@@ -780,7 +780,7 @@ export default function About() {
                             <ul className="list-disc list-inside space-y-2 text-gray-700 ml-4">
                               <li>Be at least 18 years old (or legal age of majority in your jurisdiction).</li>
                               <li>Not be located in, or a resident of, any sanctioned jurisdiction (including Iran, Belarus, Cuba, DPRK, Syria, Crimea, Donetsk, Luhansk, and Russia).</li>
-                              <li>Not be a "Sanctioned Person" as defined under applicable sanctions laws.</li>
+                              <li>Not be a&quot;Sanctioned Person&quot; as defined under applicable sanctions laws.</li>
                             </ul>
                           </section>
 
@@ -948,7 +948,7 @@ export default function About() {
                           <section>
                             <h2 className="text-xl font-semibold text-gray-900 mb-4">2. Experimental Nature</h2>
                             <p className="text-gray-700 leading-relaxed">
-                              Autopilot, Harvest vaults, Morpho vaults, IPOR Technology, and other integrated contracts are experimental and provided "as is" without warranties. Unexpected behaviour — including total loss of assets — is possible.
+                              Autopilot, Harvest vaults, Morpho vaults, IPOR Technology, and other integrated contracts are experimental and provided &quot;as is&quot; without warranties. Unexpected behaviour — including total loss of assets — is possible.
                             </p>
                           </section>
 
@@ -1017,7 +1017,7 @@ export default function About() {
 
                             <h3 className="text-lg font-medium text-gray-900 mb-3">6.2 Auto-compounding risks</h3>
                             <p className="text-gray-700 leading-relaxed mb-4">
-                              Harvest&apos; auto-compounding vaults or any other integrated auto-compounding solutions depend on scheduled "harvest" transactions to mechanically accrue and compound yield. Network congestion, failed transactions, or changes to underlying strategies in any of these systems may reduce expected performance.
+                              Harvest&apos; auto-compounding vaults or any other integrated auto-compounding solutions depend on scheduled&quot;harvest&quot; transactions to mechanically accrue and compound yield. Network congestion, failed transactions, or changes to underlying strategies in any of these systems may reduce expected performance.
                             </p>
 
                             <h3 className="text-lg font-medium text-gray-900 mb-3">6.3 Morpho vault risks</h3>
