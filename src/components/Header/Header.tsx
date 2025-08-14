@@ -2,10 +2,11 @@
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import Image from "next/image";
-// import autopilotLogo from "figma:asset/a533f6cd7fc231dd6479e232ccdb87f508ca1518.png";
-// import launchIcon from "figma:asset/a64b09b987af046ac18554166c814e5f1a34259f.png";
+import Link from "next/link";
 
-export default function Header() {
+export default function Header({disableNavLinks}: {
+  disableNavLinks?: boolean
+}) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const toggleMobileMenu = () => {
@@ -14,29 +15,22 @@ export default function Header() {
 
   return (
     <header className="absolute top-0 z-50 w-full">
-      <div className="max-w-7xl mx-auto flex h-20 items-center px-4 sm:px-6 lg:px-8">
+      <nav className="flex w-full justify-between max-w-7xl mx-auto h-20 items-center px-4 sm:px-6 lg:px-8">
         {/* Logo */}
-        <button
-        //   onClick={onNavigateHome}
-          className="flex items-center hover:opacity-80 transition-opacity"
+        <Link
+          href="/"
+          className="flex items-center justify-between hover:opacity-80 transition-opacity"
         >
-            <Image src="/logo.png" width={137} height={52} alt="Autopilot" className="h-8 w-auto"/>
-        </button>
+            <Image src="/logo.svg" width={137} height={52} alt="Autopilot" className="h-8 w-auto"/>
+        </Link>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-8 ml-8">
-          {/* Temporarily hidden
-          <button
-            onClick={onNavigateToDocumentation}
-            className="text-sm hover:text-[#9159FF] transition-colors"
-          >
-            Docs
-          </button>
-          */}
-        </nav>
-
-        {/* Spacer */}
-        <div className="flex-1" />
+        {
+          !disableNavLinks &&
+          <div className="hidden md:flex gap-5 font-bold">
+            <Link className="text-white" href="/about">About</Link>
+            <span className="text-white">Security</span>
+          </div>
+        }
 
         {/* Desktop CTA */}
         <div className="hidden md:block">
@@ -60,7 +54,7 @@ export default function Header() {
             <Menu className="w-5 h-5" />
           )}
         </button>
-      </div>
+      </nav>
 
       {/* Mobile Navigation */}
       {isMobileMenuOpen && (

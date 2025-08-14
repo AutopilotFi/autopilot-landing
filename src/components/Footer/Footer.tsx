@@ -1,5 +1,6 @@
 import { Github, Twitter, BookOpen, FileText } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 const DiscordIcon = () => (
   <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -9,17 +10,17 @@ const DiscordIcon = () => (
 
 export default function Footer() {
   return (
-    <footer className="bg-background border-t border-border">
+    <footer className="bg-background max-w-[1920px] mx-auto border-r border-l border-[#9159FF26]">
       <div className="container mx-auto px-4 py-12">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             {/* Brand */}
             <div className="md:col-span-1">
               <div className="flex items-center mb-4">
-                <Image src="/logo.png" width={172} height={35} alt="Autopilot" className="h-10 w-auto" />
+                <Image src="/black-logo.svg" width={172} height={35} alt="Autopilot" className="h-10 w-auto" />
               </div>
               <p className="text-muted-foreground text-sm mb-4 max-w-xs">
-                Automated yield optimization for Morpho vaults on Base. Maximize your DeFi returns effortlessly.
+                Supply once, done.
               </p>
               <div className="flex space-x-3">
                 <a href="#twitter" className="w-8 h-8 bg-muted rounded-lg flex items-center justify-center hover:bg-green-100 transition-colors">
@@ -27,9 +28,6 @@ export default function Footer() {
                 </a>
                 <a href="#discord" className="w-8 h-8 bg-muted rounded-lg flex items-center justify-center hover:bg-green-100 transition-colors">
                   <DiscordIcon />
-                </a>
-                <a href="#github" className="w-8 h-8 bg-muted rounded-lg flex items-center justify-center hover:bg-green-100 transition-colors">
-                  <Github className="w-4 h-4 text-muted-foreground hover:text-green-600" />
                 </a>
               </div>
             </div>
@@ -41,9 +39,9 @@ export default function Footer() {
                 <li>
                   <button
                     // onClick={onLaunchApp}
-                    className="hover:text-foreground transition-colors text-left"
+                    className="hover:text-foreground transition-colors text-left text-[#9159FF]"
                   >
-                    Launch App
+                    Demo Account
                   </button>
                 </li>
                 <li>
@@ -51,7 +49,7 @@ export default function Footer() {
                     // onClick={onLaunchApp}
                     className="hover:text-foreground transition-colors text-left"
                   >
-                    Demo Account
+                    USDC Autopilot
                   </button>
                 </li>
               </ul>
@@ -60,12 +58,11 @@ export default function Footer() {
             {/* Resources */}
             <div>
               <h4 className="font-medium mb-4">Resources</h4>
-              <ul className="space-y-2 text-sm text-muted-foreground">
+              <ul className="space-y-2 text-sm text-muted-foreground text-[#9159FF]">
                 <li>
-                  <a href="#docs" className="hover:text-foreground transition-colors flex items-center">
-                    <BookOpen className="w-3 h-3 mr-1" />
-                    Documentation
-                  </a>
+                  <Link href="/about" className="hover:text-foreground transition-colors flex items-center">
+                    About
+                  </Link>
                 </li>
                 <li>
                   <a href="#support" className="hover:text-foreground transition-colors">Support</a>
@@ -75,13 +72,21 @@ export default function Footer() {
 
             {/* Autopilot */}
             <div>
-              <h4 className="font-medium mb-4">Autopilot</h4>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li><a href="#about" className="hover:text-foreground transition-colors">About</a></li>
+              <h4 className="font-medium mb-4">Terms of Use</h4>
+              <ul className="space-y-2 text-sm text-muted-foreground text-[#9159FF]">
+                <li>
+                  <a href="#about" className="hover:text-foreground transition-colors">
+                    Terms of Use
+                  </a>
+                </li>
                 <li>
                   <a href="#terms" className="hover:text-foreground transition-colors flex items-center">
-                    <FileText className="w-3 h-3 mr-1" />
-                    Terms &amp; Privacy
+                    Risk Disclosure
+                  </a>
+                </li>
+                <li>
+                  <a href="#privacy-policy" className="hover:text-foreground transition-colors flex items-center">
+                    Privacy Policy
                   </a>
                 </li>
               </ul>
@@ -103,11 +108,9 @@ export default function Footer() {
 
             <div className="flex flex-col md:flex-row justify-between items-center text-sm text-muted-foreground">
               <div>
-                © 2025 Autopilot.Finance. All rights reserved.
+                © 2025 Autopilot.Finance
               </div>
               <div className="flex space-x-6 mt-4 md:mt-0">
-                <a href="#privacy" className="hover:text-foreground transition-colors">Privacy Policy</a>
-                <a href="#terms" className="hover:text-foreground transition-colors">Terms of Service</a>
                 <a href="#cookies" className="hover:text-foreground transition-colors">Cookie Policy</a>
               </div>
             </div>
