@@ -8,6 +8,7 @@ import { Audits } from "./Audits";
 import { TeamBackground } from "./TeamBackground";
 import Link from "next/link";
 import {useSearchParams, useRouter} from "next/navigation"
+import Image from "next/image";
 
 type TermsSheet = 'privacy-policy' | 'terms-of-service' | 'risk-disclosures';
 const isVaildTermsSheet = (h?: string | null): h is TermsSheet =>
@@ -349,7 +350,9 @@ export default function About() {
 
                       {/* Performance Chart Image */}
                       <div className="flex justify-center my-6">
-                        <img
+                        <Image
+                          width={684}
+                          height={395}
                           src={"/performanceChart.png"}
                           alt="Autopilot Performance vs Morpho Vaults - Backtesting Data"
                           className="max-w-full h-auto rounded-xl shadow-lg border border-gray-200"

@@ -1,4 +1,5 @@
 import { Crown, Trophy } from "lucide-react";
+import Image from "next/image";
 
 interface VaultData {
   name: string;
@@ -42,18 +43,20 @@ export function Benchmark() {
       <div className="space-y-8">
         <div>
           <h2 className="text-xl font-semibold text-gray-900 mb-6">Autopilot vs. Standalone Morpho Vaults Benchmark</h2>
-          
+
           {/* Performance Chart */}
           <div className="mb-6 flex justify-center">
-            <img 
-              src={"/performanceChart.png"} 
-              alt="Autopilot vs Morpho Vaults Performance Chart" 
+            <Image
+              width={684}
+              height={395}
+              src={"/performanceChart.png"}
+              alt="Autopilot vs Morpho Vaults Performance Chart"
               className="w-full max-w-4xl h-auto rounded-xl border border-gray-200 shadow-lg"
             />
           </div>
-          
+
           <p className="text-lg text-gray-600 leading-relaxed mb-8">
-            Backtesting performance data comparing Autopilot&apos;s automated rebalancing strategy 
+            Backtesting performance data comparing Autopilot&apos;s automated rebalancing strategy
             against individual Morpho USDC vaults on Mainnet over 6 months (1 Jan – 29 June 2025).
           </p>
         </div>
@@ -64,7 +67,7 @@ export function Benchmark() {
             ← Swipe table horizontally to view comparison data →
           </p>
         </div>
-        
+
         <div className="w-full overflow-hidden rounded-xl border border-gray-200">
           {/* Mobile Optimized Table with Horizontal Scroll */}
           <div className="overflow-x-auto scrollbar-hide w-full">
@@ -89,22 +92,22 @@ export function Benchmark() {
                 {allVaultData.map((vault, index) => {
                   const difference = vault.apy - 10.37; // Compare to Autopilot net
                   const isAutopilotEntry = vault.isAutopilot || vault.isAutopilotNet;
-                  
+
                   return (
-                    <tr 
-                      key={vault.name} 
+                    <tr
+                      key={vault.name}
                       className={`transition-colors ${
-                        vault.isAutopilot 
+                        vault.isAutopilot
                           ? 'bg-gradient-to-r from-[#9159FF] to-[#7c3aed] text-white'
-                          : vault.isAutopilotNet 
+                          : vault.isAutopilotNet
                             ? 'bg-gradient-to-r from-[#a78bfa] to-[#8b5cf6] text-white'
                             : 'hover:bg-gray-50'
                       }`}
                     >
                       <td className={`sticky left-0 px-2 md:px-4 py-4 border-r border-gray-300 ${
-                        vault.isAutopilot 
+                        vault.isAutopilot
                           ? 'bg-gradient-to-r from-[#9159FF] to-[#7c3aed]'
-                          : vault.isAutopilotNet 
+                          : vault.isAutopilotNet
                             ? 'bg-gradient-to-r from-[#a78bfa] to-[#8b5cf6]'
                             : 'bg-white'
                       }`}>
@@ -124,9 +127,9 @@ export function Benchmark() {
                         </div>
                       </td>
                       <td className={`sticky left-[50px] md:left-[70px] px-2 md:px-4 py-4 border-r-2 border-gray-400 ${
-                        vault.isAutopilot 
+                        vault.isAutopilot
                           ? 'bg-gradient-to-r from-[#9159FF] to-[#7c3aed]'
-                          : vault.isAutopilotNet 
+                          : vault.isAutopilotNet
                             ? 'bg-gradient-to-r from-[#a78bfa] to-[#8b5cf6]'
                             : 'bg-white'
                       }`}>
@@ -137,12 +140,12 @@ export function Benchmark() {
                             {vault.name}
                           </div>
                           <div className={`text-xs ${
-                            isAutopilotEntry 
-                              ? 'text-white/80' 
+                            isAutopilotEntry
+                              ? 'text-white/80'
                               : 'text-gray-500'
                           }`}>
-                            {isAutopilotEntry 
-                              ? vault.isAutopilotNet 
+                            {isAutopilotEntry
+                              ? vault.isAutopilotNet
                                 ? 'After fees'
                                 : 'Before fees'
                               : 'Morpho Vault'
@@ -159,13 +162,13 @@ export function Benchmark() {
                       </td>
                       <td className="px-2 md:px-6 py-4 text-right">
                         <div className={`text-sm font-medium ${
-                          isAutopilotEntry 
+                          isAutopilotEntry
                             ? 'text-white'
-                            : difference >= 0 
-                              ? 'text-green-600' 
+                            : difference >= 0
+                              ? 'text-green-600'
                               : 'text-red-600'
                         }`}>
-                          {isAutopilotEntry 
+                          {isAutopilotEntry
                             ? '—'
                             : `${difference >= 0 ? '+' : ''}${difference.toFixed(2)}%`
                           }
@@ -182,7 +185,7 @@ export function Benchmark() {
         {/* A Word on Performance and Mechanics */}
         <div className="pt-8 border-t border-gray-200">
           <h2 className="text-xl font-semibold text-gray-900 mb-6">A Word on Performance and Mechanics</h2>
-          
+
           <div className="space-y-4">
             <div className="flex items-start space-x-4">
               <div className="flex-shrink-0 w-2 h-2 bg-[#9159FF] rounded-full mt-3"></div>
@@ -190,14 +193,14 @@ export function Benchmark() {
                 The longer Autopilot runs, the more visible and significant its outperformance becomes compared to the best standalone Morpho vaults.
               </p>
             </div>
-            
+
             <div className="flex items-start space-x-4">
               <div className="flex-shrink-0 w-2 h-2 bg-[#9159FF] rounded-full mt-3"></div>
               <p className="text-lg text-gray-700 leading-relaxed">
                 Both raw and net Autopilot performance are shown in the benchmark. Net results account for setup and management fees, which are negotiable with the IPOR DAO (the rebalancing infrastructure provider) and can be reduced through IPOR token holdings. Fee adjustments can be explored in the future to further improve net performance.
               </p>
             </div>
-            
+
             <div className="flex items-start space-x-4">
               <div className="flex-shrink-0 w-2 h-2 bg-[#9159FF] rounded-full mt-3"></div>
               <p className="text-lg text-gray-700 leading-relaxed">
@@ -211,9 +214,9 @@ export function Benchmark() {
         <div className="p-6 bg-gray-50 rounded-2xl border border-gray-200">
           <h4 className="text-sm font-semibold text-gray-900 mb-2">Performance Disclaimer</h4>
           <p className="text-xs text-gray-600 leading-relaxed">
-            Past performance is not indicative of future results. APY data represents historical 6-month averages 
-            (1 Jan – 29 June 2025) and actual returns may vary. Autopilot performance includes the impact of 
-            rebalancing costs and management fees where applicable. Individual vault performance may be affected by 
+            Past performance is not indicative of future results. APY data represents historical 6-month averages
+            (1 Jan – 29 June 2025) and actual returns may vary. Autopilot performance includes the impact of
+            rebalancing costs and management fees where applicable. Individual vault performance may be affected by
             market conditions, liquidity constraints, and protocol-specific factors.
           </p>
         </div>

@@ -88,7 +88,7 @@ export default function Header({whiteTheme} : {
             className="inline-flex items-center px-6 py-2 bg-[#9159FF] hover:bg-[#7c3aed] text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
           >
             Launch App
-            <img src={"/launchIcon.png"} alt="" className="ml-2 w-4 h-4" />
+            <Image width={14} height={14} src={"/launchIcon.png"} alt="launch icon" className="ml-2 w-4 h-4" />
           </Link>
         </div>
 
@@ -153,7 +153,7 @@ export default function Header({whiteTheme} : {
                 disabled
                 className="flex items-center justify-center w-full p-4 rounded-xl bg-gradient-to-r from-gray-100 to-gray-200 cursor-not-allowed font-medium border border-gray-300 relative"
               >
-                <img src={"/black-logo.svg"} alt="" className="w-5 h-5 mr-3 opacity-60" />
+                <Image width={17.5} height={17.5} src={"/black-logo.svg"} alt="" className="w-5 h-5 mr-3 opacity-60" />
                 <span style={{ color: '#575757' }}>Launch App</span>
                 <div className="ml-3 bg-gradient-to-r from-purple-500 to-purple-600 text-white text-xs px-2 py-1 rounded-full font-medium shadow-lg">
                   Soon
