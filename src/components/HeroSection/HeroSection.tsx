@@ -6,15 +6,14 @@ export default function HeroSection() {
 
   return (
     <section
-      className="relative max-w-[1920px] mx-auto pt-32 pb-32 overflow-hidden bg-cover"
-      style={{backgroundImage: "url('./bg-gradient.png')"}}
+      className="relative max-w-[1920px] mx-auto pt-32 pb-32 2xl:pt-42 2xl:pb-42 overflow-hidden bg-grandient"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Column - Hero Content */}
           <div className="text-center lg:text-left">
             {/* Badge */}
-            <div className="inline-flex items-center space-x-2 bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-medium mb-8">
+            <div className="hidden md:inline-flex items-center space-x-2 bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-medium mb-8">
               <Zap className="w-4 h-4" />
               <span>Smart DeFi Yield Optimization</span>
             </div>
@@ -33,10 +32,10 @@ export default function HeroSection() {
             </p>
 
             {/* Trust Badges */}
-            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-8 mb-8 text-sm text-gray-600">
+            <div className="hidden md:flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-8 mb-8 text-sm text-gray-600">
               <div className="flex items-center space-x-2">
                 <Shield className="w-5 h-5 text-[#9159FF]" />
-                <span className="text-[#9159FF]">Audited & Secure</span>
+                <span className="text-[#9159FF]">Audited</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Zap className="w-5 h-5 text-[#9159FF]" />
@@ -45,10 +44,10 @@ export default function HeroSection() {
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
+            <div className="flex flex-col flex-row items-center justify-center lg:justify-start space-y-4 space-y-0 space-x-4 text-xs md:text-base">
               <button
                 // onClick={handleGetStarted}
-                className="inline-flex items-center px-8 py-4 bg-[#9159FF] hover:bg-[#7c3aed] text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                className="inline-flex items-center px-8 py-4 bg-[#9159FF] hover:bg-[#7c3aed] text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl my-0"
               >
                 Launching Soon
                 <Image src="/launchIcon.png" width={17.5} height={17.5} alt="Launch Icon" className="ml-2 w-5 h-5" />

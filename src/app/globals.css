@@ -184,6 +184,26 @@
   }
 }
 
+@keyframes slideUpMobile {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(145, 89, 255, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(145, 89, 255, 0.6);
+  }
+}
+
 @keyframes scaleIn {
   from {
     opacity: 0;
@@ -317,6 +337,8 @@
   --animate-slideInRight: slideInRight 0.8s ease-out forwards;
   --animate-slideInLeft: slideInLeft 0.8s ease-out forwards;
   --animate-scaleIn: scaleIn 0.6s ease-out forwards;
+  --animate-slideUpMobile: slideUpMobile 0.4s ease-out forwards;
+  --animate-pulseGlow: pulseGlow 2s ease-in-out infinite;
   --animate-flow-dot: flowDot 3s ease-in-out infinite;
   --animate-flow-path: flowPath 2s ease-in-out infinite;
   --animate-glow-pulse: glowPulse 2s ease-in-out infinite;
@@ -726,6 +748,179 @@ html {
   box-shadow: 0 2px 8px rgba(145, 89, 255, 0.3);
 }
 
+/* Elegant Desktop Navigation Badges */
+.nav-badge {
+  @apply inline-flex items-center px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ease-out;
+  border: 1.5px solid transparent;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(8px);
+  color: #64748b;
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-badge::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(145, 89, 255, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.nav-badge:hover::before {
+  left: 100%;
+}
+
+.nav-badge:hover {
+  border-color: rgba(145, 89, 255, 0.3);
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--autopilot-brand-purple);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(145, 89, 255, 0.15);
+}
+
+.nav-badge-icon {
+  @apply w-4 h-4 mr-2 transition-colors duration-300;
+  color: #94a3b8;
+}
+
+.nav-badge:hover .nav-badge-icon {
+  color: var(--autopilot-brand-purple);
+}
+
+/* Premium variant with subtle outline */
+.nav-badge-outline {
+  @apply inline-flex items-center px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ease-out;
+  border: 1.5px solid rgba(145, 89, 255, 0.2);
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(12px);
+  color: #475569;
+  position: relative;
+}
+
+.nav-badge-outline:hover {
+  border-color: var(--autopilot-brand-purple);
+  background: rgba(255, 255, 255, 0.95);
+  color: var(--autopilot-brand-purple);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 25px rgba(145, 89, 255, 0.2);
+}
+
+/* Minimal clean variant */
+.nav-badge-minimal {
+  @apply inline-flex items-center px-3 py-1.5 rounded-lg text-sm font-medium transition-all duration-200;
+  color: #64748b;
+  position: relative;
+}
+
+.nav-badge-minimal::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--autopilot-brand-purple);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-badge-minimal:hover {
+  color: var(--autopilot-brand-purple);
+}
+
+.nav-badge-minimal:hover::after {
+  width: 100%;
+}
+
+/* Elegant pill badge */
+.nav-badge-pill {
+  @apply inline-flex items-center px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(248, 250, 252, 0.9));
+  border: 1px solid rgba(145, 89, 255, 0.15);
+  backdrop-filter: blur(10px);
+  color: #475569;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.nav-badge-pill:hover {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(250, 245, 255, 0.9));
+  border-color: rgba(145, 89, 255, 0.4);
+  color: var(--autopilot-brand-purple);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(145, 89, 255, 0.12);
+}
+
+/* Alternative badge styles */
+
+/* Sleek glass badge */
+.nav-badge-glass {
+  @apply inline-flex items-center px-4 py-2 rounded-2xl text-sm font-medium transition-all duration-300;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px);
+  color: #64748b;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.nav-badge-glass:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(145, 89, 255, 0.3);
+  color: var(--autopilot-brand-purple);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 4px 20px rgba(145, 89, 255, 0.1);
+}
+
+/* Subtle shadow badge */
+.nav-badge-shadow {
+  @apply inline-flex items-center px-4 py-2 rounded-xl text-sm font-medium transition-all duration-300;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  color: #475569;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+}
+
+.nav-badge-shadow:hover {
+  background: rgba(255, 255, 255, 1);
+  border-color: rgba(145, 89, 255, 0.3);
+  color: var(--autopilot-brand-purple);
+  box-shadow: 0 4px 12px rgba(145, 89, 255, 0.15), 0 2px 4px rgba(0, 0, 0, 0.1);
+  transform: translateY(-1px);
+}
+
+/* Refined minimal badge */
+.nav-badge-refined {
+  @apply inline-flex items-center px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300;
+  background: transparent;
+  border: 1.5px solid transparent;
+  color: #64748b;
+  position: relative;
+}
+
+.nav-badge-refined::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  padding: 1.5px;
+  background: linear-gradient(135deg, rgba(145, 89, 255, 0.1), rgba(145, 89, 255, 0.05));
+  border-radius: inherit;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.nav-badge-refined:hover::before {
+  opacity: 1;
+}
+
+.nav-badge-refined:hover {
+  color: var(--autopilot-brand-purple);
+  background: rgba(250, 245, 255, 0.5);
+}
+
 /* Purple-branded alert and notification styles */
 .alert-info {
   background: var(--autopilot-surface-primary);
@@ -756,4 +951,15 @@ html {
   background-image: radial-gradient(circle, rgba(145, 89, 255, 0.08) 1px, transparent 1px);
   background-size: 24px 24px;
   background-position: 0 0, 12px 12px;
+}
+
+.bg-grandient{
+  background-image: url('/mobile-bg-gradient.png');
+  background-size: cover;
+}
+
+@media(min-width: 768px){
+  .bg-grandient{
+      background-image: url('/bg-gradient.png');
+  }
 }

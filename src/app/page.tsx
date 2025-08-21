@@ -8,7 +8,6 @@ export default function Home() {
       <Header/>
       <main>
         <HeroSection/>
-        {/* <AppPreview/> */}
       </main>
       <Footer/>
     </div>
