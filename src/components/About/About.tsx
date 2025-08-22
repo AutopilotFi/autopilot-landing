@@ -1,6 +1,6 @@
 "use client"
 import { useState, useEffect } from "react";
-import { Home, FileText, ExternalLink, Info, Users, CheckCircle, Settings, TrendingUp, Shield, Compass, Cpu, BarChart3, Menu, ChevronUp } from "lucide-react";
+import { Home, FileText, Info, Users, CheckCircle, Settings, TrendingUp, Shield, Compass, Cpu, BarChart3, Menu, ChevronUp } from "lucide-react";
 import { Benchmark } from "./Benchmark";
 import { SecurityRiskManagement } from "./SecurityRiskManagement";
 import { Technology } from "./Technology";

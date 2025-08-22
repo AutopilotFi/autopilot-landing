@@ -1,7 +1,6 @@
 "use client"
 import { useState } from "react";
-import { ExternalLink, TrendingUp, Shield, Activity, DollarSign, Clock, BarChart3, ChevronLeft, ChevronRight, Menu, X } from "lucide-react";
-import Link from "next/link";
+import { ExternalLink, TrendingUp, Shield, Activity, DollarSign, Clock, BarChart3, ChevronLeft, ChevronRight } from "lucide-react";
 import { allEarningsData, protocolStats, autopilotProducts } from "./consts";
 
 export interface EarningsEntry {

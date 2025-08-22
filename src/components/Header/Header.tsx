@@ -1,7 +1,7 @@
 "use client"
 import Link from "next/link";
 import clsx from "clsx";
-import { Menu, X, TrendingUp, Shield, BarChart3, Zap, Home } from "lucide-react";
+import { Menu, X, TrendingUp, BarChart3, Zap } from "lucide-react";
 import { useState, useEffect } from "react";
 import { usePathname } from 'next/navigation'
 import Image from "next/image";
