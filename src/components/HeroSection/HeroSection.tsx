@@ -66,83 +66,78 @@ export default function HeroSection() {
           {/* Right Column - APY Ranking Card */}
           <div className="flex justify-center lg:justify-end">
             <div className="bg-white rounded-2xl shadow-2xl p-8 w-full max-w-md border border-gray-100">
-              {/* Card Header
-              <div className="text-center mb-8">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">30-Day Average APY</h3>
-              </div> */}
-
               {/* Rankings List */}
               <div className="space-y-4">
                 {/* #1 Autopilot USDC */}
-                <div className="flex items-center justify-between p-4 bg-purple-50 rounded-xl border border-purple-200 relative" style={{backgroundImage: "url('./bg-gradient.png')"}}>
+                <div className="flex items-center justify-between p-4 bg-purple-50 rounded-xl border border-purple-200 relative transition-all duration-200 hover:bg-purple-100 hover:shadow-md hover:-translate-y-0.5 cursor-pointer">
                   <div className="absolute -top-2 -left-2 w-6 h-6 bg-[#9159FF] text-white rounded-full flex items-center justify-center text-xs font-bold">
                     1
                   </div>
                   <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-[#9159FF] rounded-full"></div>
+                    <div className="w-2 h-2 bg-[#9159FF] rounded-full animate-[var(--animate-gentle-blink)]"></div>
                     <div>
-                      <div className="font-semibold text-[#D1D5DC]">Autopilot USDC</div>
-                      <div className="text-xs text-[#ACACAC]">Auto-rebalancer</div>
+                      <div className="font-semibold text-gray-900">Autopilot USDC</div>
+                      <div className="text-xs text-gray-500">Morpho-optimizer</div>
                     </div>
                   </div>
                   <div className="text-right">
-                    <div className="text-xl font-bold text-white">9.03%</div>
-                    <div className="text-xs text-white">APY</div>
+                    <div className="text-xl font-bold text-[#9159FF]">10.37%</div>
+                    <div className="text-xs text-gray-500">6m APY</div>
                   </div>
                 </div>
 
-                {/* #2 Gauntlet USDC Core */}
-                <div className="flex items-center justify-between p-4 bg-gray-50 rounded-xl">
+                {/* #2 MEV Capital USDC */}
+                <div className="flex items-center justify-between p-4 bg-gray-50 rounded-xl transition-all duration-200 hover:bg-gray-100 hover:shadow-md hover:-translate-y-0.5 cursor-pointer">
                   <div className="flex items-center space-x-3">
                     <div className="w-2 h-2 bg-gray-400 rounded-full"></div>
                     <div>
-                      <div className="font-medium text-gray-900">Gauntlet USDC Core</div>
+                      <div className="font-medium text-gray-900">MEV Capital USDC</div>
                       <div className="text-xs text-gray-500">Morpho Vault</div>
                     </div>
                   </div>
                   <div className="text-right">
-                    <div className="text-lg font-semibold text-gray-900">8.05%</div>
-                    <div className="text-xs text-gray-500">APY</div>
+                    <div className="text-lg font-semibold text-gray-900">9.93%</div>
+                    <div className="text-xs text-gray-500">6m APY</div>
                   </div>
                 </div>
 
-                {/* #3 Hyperithm USDC */}
-                <div className="flex items-center justify-between p-4 bg-gray-50 rounded-xl">
+                {/* #3 Relend USDC */}
+                <div className="flex items-center justify-between p-4 bg-gray-50 rounded-xl transition-all duration-200 hover:bg-gray-100 hover:shadow-md hover:-translate-y-0.5 cursor-pointer">
                   <div className="flex items-center space-x-3">
                     <div className="w-2 h-2 bg-gray-400 rounded-full"></div>
                     <div>
-                      <div className="font-medium text-gray-900">Hyperithm USDC</div>
+                      <div className="font-medium text-gray-900">Relend USDC</div>
                       <div className="text-xs text-gray-500">Morpho Vault</div>
                     </div>
                   </div>
                   <div className="text-right">
-                    <div className="text-lg font-semibold text-gray-900">7.82%</div>
-                    <div className="text-xs text-gray-500">APY</div>
+                    <div className="text-lg font-semibold text-gray-900">9.19%</div>
+                    <div className="text-xs text-gray-500">6m APY</div>
                   </div>
                 </div>
 
-                {/* #4 Steakhouse USDC */}
-                <div className="flex items-center justify-between p-4 bg-gray-50 rounded-xl">
+                {/* #4 Smokehouse USDC */}
+                <div className="flex items-center justify-between p-4 bg-gray-50 rounded-xl transition-all duration-200 hover:bg-gray-100 hover:shadow-md hover:-translate-y-0.5 cursor-pointer">
                   <div className="flex items-center space-x-3">
                     <div className="w-2 h-2 bg-gray-400 rounded-full"></div>
                     <div>
-                      <div className="font-medium text-gray-900">Steakhouse USDC</div>
+                      <div className="font-medium text-gray-900">Smokehouse USDC</div>
                       <div className="text-xs text-gray-500">Morpho Vault</div>
                     </div>
                   </div>
                   <div className="text-right">
-                    <div className="text-lg font-semibold text-gray-900">7.64%</div>
-                    <div className="text-xs text-gray-500">APY</div>
+                    <div className="text-lg font-semibold text-gray-900">8.77%</div>
+                    <div className="text-xs text-gray-500">6m APY</div>
                   </div>
                 </div>
               </div>
 
               {/* Bottom Stats */}
               <div className="mt-6 pt-4 border-t border-gray-100">
-                <div className="flex items-center justify-center space-x-2 text-sm">
+                <div className="flex items-center justify-center space-x-1 text-sm">
                   <TrendingUp className="w-4 h-4 text-[#9159FF]" />
-                  <span className="text-[#9159FF] font-medium">Leading yield</span>
-                  <span className="text-gray-500">with automated optimization</span>
+                  <span className="text-[#9159FF] font-medium">Leading performance</span>
+                  <span className="text-gray-500">with high-frequency rebalancing</span>
                 </div>
               </div>
             </div>

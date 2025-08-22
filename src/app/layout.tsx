@@ -37,6 +37,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   preload("/bg-gradient.png", { as: "image", fetchPriority: "high" });
+  preload("/mobile-bg-gradient.png", { as: "image", fetchPriority: "high" });
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>

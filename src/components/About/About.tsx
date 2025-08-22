@@ -57,7 +57,9 @@ export default function About() {
 
   useEffect(() => {
     if(searchParams.get("section") !== contentType){
-      router.replace('/about');
+      router.replace('/about', {
+        scroll: false
+      });
     }
   }, [contentType])
 
