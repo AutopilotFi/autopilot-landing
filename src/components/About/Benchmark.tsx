@@ -89,7 +89,7 @@ export function Benchmark() {
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-200">
-                {allVaultData.map((vault, index) => {
+                {allVaultData.map((vault) => {
                   const difference = vault.apy - 10.37; // Compare to Autopilot net
                   const isAutopilotEntry = vault.isAutopilot || vault.isAutopilotNet;
 

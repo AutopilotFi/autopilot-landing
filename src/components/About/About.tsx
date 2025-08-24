@@ -29,6 +29,10 @@ const getInitialTermsSheet = (param?: string | null) => {
   else return "privacy-policy";
 }
 
+const scrollTop = () => {
+  window.scrollTo(0, 0);
+}
+
 export default function About() {
   const searchParams = useSearchParams();
   const router = useRouter();
@@ -36,11 +40,6 @@ export default function About() {
   const [contentType, setContentType] = useState<ContentType>(getInitialContentType(searchParams.get("section")));
   const [activeTermsSheet, setActiveTermsSheet] = useState<TermsSheet>(getInitialTermsSheet(searchParams.get("termsType")));
   const [isMobileMenuExpanded, setIsMobileMenuExpanded] = useState(false);
-
-
-  const scrollTop = () => {
-    window.scrollTo(0, 0);
-  }
 
   const changeContentType = (content: ContentType) => {
     setContentType(content);
@@ -51,17 +50,19 @@ export default function About() {
   useEffect(() => {
     const sectionFromUrl = searchParams.get("section");
     if(isVaildContentType(sectionFromUrl)){
-        changeContentType(sectionFromUrl);
+        setContentType(sectionFromUrl);
+        scrollTop();
     }
   }, [searchParams]);
 
   useEffect(() => {
-    if(searchParams.get("section") !== contentType){
+    const currentSection = new URLSearchParams(window.location.search).get("section");
+    if(currentSection !== contentType){
       router.replace('/about', {
         scroll: false
       });
     }
-  }, [contentType])
+}, [contentType, router]);
 
   const scrollToSection = (sectionId: string) => {
     // Always switch to about content first if not already there

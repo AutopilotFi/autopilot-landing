@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { ExternalLink, TrendingUp, Shield, Activity, DollarSign, Clock, BarChart3, ChevronLeft, ChevronRight } from "lucide-react";
 import { allEarningsData, protocolStats, autopilotProducts } from "./consts";
+import Image from "next/image";
 
 export interface EarningsEntry {
   date: string;
@@ -51,8 +52,8 @@ export default function Transparency() {
     return (
       <div className="flex items-center space-x-3">
         <div className="flex items-center space-x-2">
-          <img src={getAssetIcon(asset)} alt={asset} className="w-4 h-4 sm:w-5 sm:h-5" />
-          <img src={"/projects/morpho.png"} alt={project} className="w-3 h-3 sm:w-4 sm:h-4" />
+          <Image width={10} height={10} src={getAssetIcon(asset)} alt={asset} className="w-4 h-4 sm:w-5 sm:h-5" />
+          <Image width={10} height={10} src={"/projects/morpho.png"} alt={project} className="w-3 h-3 sm:w-4 sm:h-4" />
         </div>
         <div className="flex flex-col min-w-0">
           <div className="flex items-center space-x-1 text-xs sm:text-sm font-medium text-gray-900">
