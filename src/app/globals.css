@@ -857,20 +857,56 @@ html {
 /* Alternative badge styles */
 
 /* Sleek glass badge */
+.nav-badge-glass .nav-badge-icon {
+  color: white;
+}
+
+.nav-badge-glass:hover .nav-badge-icon {
+  /* color: var(--autopilot-brand-purple); */
+}
+
 .nav-badge-glass {
-  @apply inline-flex items-center px-4 py-2 rounded-2xl text-sm font-medium transition-all duration-300;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(20px);
-  color: #64748b;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  @apply inline-flex items-center px-5 py-2.5 rounded-2xl text-sm font-medium transition-all duration-300 ease-out;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(24px);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.4),
+    0 2px 8px rgba(0, 0, 0, 0.04),
+    0 1px 3px rgba(0, 0, 0, 0.06);
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-badge-glass::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.6s ease;
+}
+
+.nav-badge-glass:hover::before {
+  left: 100%;
 }
 
 .nav-badge-glass:hover {
-  background: rgba(255, 255, 255, 0.2);
-  border-color: rgba(145, 89, 255, 0.3);
-  color: var(--autopilot-brand-purple);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 4px 20px rgba(145, 89, 255, 0.1);
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(145, 89, 255, 0.35);
+  /* color: var(--autopilot-brand-purple); */
+  transform: translateY(-1px);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.5),
+    0 8px 32px rgba(145, 89, 255, 0.15),
+    0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.nav-badge-glass:active {
+  transform: translateY(0px) scale(0.98);
+  transition-duration: 150ms;
 }
 
 /* Subtle shadow badge */

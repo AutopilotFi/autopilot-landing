@@ -63,14 +63,14 @@ export default function Header({whiteTheme} : {
           <nav className="hidden md:flex items-center justify-center space-x-8">
             <Link
               href={"/about?section=about"}
-              className={clsx((whiteTheme ? "text-black" : "text-white"), "nav-badge-pill group")}
+              className={clsx((whiteTheme ? "text-black" : "text-white"), "nav-badge-glass group active:scale-95")}
             >
               <TrendingUp className="nav-badge-icon" />
               Benefits
             </Link>
             <Link
               href={"/about?section=benchmark"}
-              className={clsx((whiteTheme ? "text-black" : "text-white"), "nav-badge-pill group")}
+              className={clsx((whiteTheme ? "text-black" : "text-white"), "nav-badge-glass group active:scale-95")}
             >
               <BarChart3 className="nav-badge-icon" />
               Benchmark
@@ -87,7 +87,7 @@ export default function Header({whiteTheme} : {
             href="#"
             className="inline-flex items-center px-6 py-2 bg-[#9159FF] hover:bg-[#7c3aed] text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
           >
-            Launch App
+            Launching Soon
             <Image width={14} height={14} src={"/launchIcon.png"} alt="launch icon" className="ml-2 w-4 h-4" />
           </Link>
         </div>
