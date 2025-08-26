@@ -62,14 +62,14 @@ export default function Header({whiteTheme} : {
         {
           <nav className="hidden md:flex items-center justify-center space-x-8">
             <Link
-              href={"/about?section=about"}
+              href={"/about#about"}
               className={clsx((whiteTheme ? "text-black" : "text-white"), "nav-badge-glass group active:scale-95")}
             >
               <TrendingUp className="nav-badge-icon" />
               Benefits
             </Link>
             <Link
-              href={"/about?section=benchmark"}
+              href={"/about#benchmark"}
               className={clsx((whiteTheme ? "text-black" : "text-white"), "nav-badge-glass group active:scale-95")}
             >
               <BarChart3 className="nav-badge-icon" />
@@ -117,7 +117,7 @@ export default function Header({whiteTheme} : {
             {/* Main Navigation Links */}
             <div className="space-y-3">
               <Link
-                href="/about?section=about"
+                href="/about#about"
                 onClick={closeMobileMenu}
                 className="flex items-center p-4 rounded-xl transition-all duration-200 text-gray-700 hover:bg-gradient-to-r hover:from-purple-100 hover:to-purple-200 hover:text-[#9159FF] w-full group"
               >
@@ -126,7 +126,7 @@ export default function Header({whiteTheme} : {
               </Link>
 
               <Link
-                href="/about?section=benchmark"
+                href="/about#benchmark"
                 onClick={closeMobileMenu}
                 className="flex items-center p-4 rounded-xl transition-all duration-200 text-gray-700 hover:bg-gradient-to-r hover:from-purple-100 hover:to-purple-200 hover:text-[#9159FF] w-full group"
               >
@@ -138,16 +138,17 @@ export default function Header({whiteTheme} : {
 
             {/* Action Buttons */}
             <div className="pt-4 border-t border-purple-200/50 space-y-3">
-              <button
+              <a
+                href="https://demo.autopilot.finance/"
+                target="_blank"
                 onClick={() => {
-                  // Demo functionality placeholder
                   setIsMobileMenuExpanded(false);
                 }}
                 className="flex items-center justify-center w-full p-4 rounded-xl bg-gradient-to-r from-purple-100 to-purple-200 hover:from-purple-200 hover:to-purple-300 text-purple-700 transition-all duration-200 font-medium border border-purple-300"
               >
                 <Zap className="w-5 h-5 mr-3" />
                 <span>Open Demo</span>
-              </button>
+              </a>
 
               <button
                 disabled

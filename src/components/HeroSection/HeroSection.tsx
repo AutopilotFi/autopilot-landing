@@ -53,13 +53,14 @@ export default function HeroSection() {
                 <Image src="/launchIcon.png" width={17.5} height={17.5} alt="Launch Icon" className="ml-2 w-5 h-5" />
               </button>
 
-              <button
-                // onClick={handleWatchDemo}
+              <a
+                href="https://demo.autopilot.finance/"
+                target="_blank"
                 className="inline-flex items-center px-8 py-4 bg-white hover:bg-gray-50 text-gray-700 font-semibold rounded-xl border border-gray-200 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
               >
                 <PlayCircle className="mr-2 w-5 h-5" />
                 Demo Account
-              </button>
+              </a>
             </div>
           </div>
 
@@ -134,8 +135,8 @@ export default function HeroSection() {
 
               {/* Bottom Stats */}
               <div className="mt-6 pt-4 border-t border-gray-100">
-                <div className="flex items-center justify-center space-x-1 text-sm">
-                  <TrendingUp className="w-4 h-4 text-[#9159FF]" />
+                <div className="space-x-1 text-sm">
+                  <TrendingUp className="w-4 h-4 text-[#9159FF] inline" />
                   <span className="text-[#9159FF] font-medium">Leading performance</span>
                   <span className="text-gray-500">with high-frequency rebalancing</span>
                 </div>
