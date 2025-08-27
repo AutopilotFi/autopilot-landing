@@ -20,9 +20,12 @@ export default function Footer() {
                   </div>
                 </li>
                 <li>
-                  <div className="text-[#9159FF]">
+                  <a
+                    href="https://demo.autopilot.finance/"
+                    target="_blank"
+                    className="text-[#9159FF]">
                     Demo Account
-                  </div>
+                  </a>
                 </li>
               </ul>
             </div>
@@ -33,7 +36,7 @@ export default function Footer() {
               <ul className="space-y-2 text-sm">
                 <li>
                   <Link
-                    href={"/about?section=about"}
+                    href={"/about#about"}
                     className="text-[#9159FF] hover:text-[#7c3aed] transition-colors text-left"
                   >
                     About
@@ -41,7 +44,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    href={"/about?section=benefits"}
+                    href={"/about#about"}
                     className="text-[#9159FF] hover:text-[#7c3aed] transition-colors text-left"
                   >
                     Benefits
@@ -49,7 +52,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    href={"/about?section=benchmark"}
+                    href={"/about#benchmark"}
                     className="text-[#9159FF] hover:text-[#7c3aed] transition-colors text-left"
                   >
                     Benchmarks
@@ -63,9 +66,9 @@ export default function Footer() {
               <h4 className="font-medium mb-4">Community</h4>
               <ul className="space-y-2 text-sm">
                 <li>
-                  <a href="#discord" className="text-[#9159FF] hover:text-[#7c3aed] transition-colors">
+                  <div className="text-muted-foreground">
                     Discord
-                  </a>
+                  </div>
                 </li>
                 <li>
                   <a href="https://x.com/Autopilot_fi" target="_blank" className="text-[#9159FF] hover:text-[#7c3aed] transition-colors">
@@ -80,18 +83,18 @@ export default function Footer() {
               <h4 className="font-medium mb-4">Terms of Service</h4>
               <ul className="space-y-2 text-sm">
                 <li>
-                  <Link href="/about?section=terms&termsType=privacy-policy" className="text-[#9159FF] hover:text-[#7c3aed] transition-colors">
+                  <Link href="/about#privacy-policy" className="text-[#9159FF] hover:text-[#7c3aed] transition-colors">
                     Privacy Policy
                   </Link>
                 </li>
                 <li>
-                  <Link href="/about?section=terms&termsType=terms-of-service" className="text-[#9159FF] hover:text-[#7c3aed] transition-colors">Terms of Service</Link>
+                  <Link href="/about#terms-of-service" className="text-[#9159FF] hover:text-[#7c3aed] transition-colors">Terms of Service</Link>
                 </li>
                 <li>
-                  <Link href="/about?section=terms&termsType=risk-disclosures" className="text-[#9159FF] hover:text-[#7c3aed] transition-colors">Risk Disclosures</Link>
+                  <Link href="/about#risk-disclosures" className="text-[#9159FF] hover:text-[#7c3aed] transition-colors">Risk Disclosures</Link>
                 </li>
                 <li>
-                  <Link href="/about?section=security" className="text-[#9159FF] hover:text-[#7c3aed] transition-colors">Security & Risk</Link>
+                  <Link href="/about#security" className="text-[#9159FF] hover:text-[#7c3aed] transition-colors">Security & Risk</Link>
                 </li>
               </ul>
             </div>

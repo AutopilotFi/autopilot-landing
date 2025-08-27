@@ -10,65 +10,36 @@ import Link from "next/link";
 import {useSearchParams, useRouter} from "next/navigation"
 import Image from "next/image";
 
-type TermsSheet = 'privacy-policy' | 'terms-of-service' | 'risk-disclosures';
-const isVaildTermsSheet = (h?: string | null): h is TermsSheet =>
-  !!h && ['privacy-policy', 'terms-of-service', 'risk-disclosures'].includes(h);
-type ContentType = 'about' | 'benchmark' | 'security' | 'technology' | 'audits' | 'terms' | 'team';
+type ContentType = 'about' | 'benchmark' | 'security' | 'technology' | 'audits' | 'team' | 'privacy-policy' | 'terms-of-service' | 'risk-disclosures';
 const isVaildContentType = (h?: string | null): h is ContentType =>
-  !!h && ['about', 'benchmark', 'security', 'technology', 'audits', 'terms', 'team'].includes(h);
-
-const getInitialContentType = (param?: string | null) => {
-  if(param && isVaildContentType(param))
-    return param;
-  else return "about";
-}
-
-const getInitialTermsSheet = (param?: string | null) => {
-  if(param && isVaildTermsSheet(param))
-    return param;
-  else return "privacy-policy";
-}
-
-const scrollTop = () => {
-  window.scrollTo(0, 0);
-}
+  !!h && ['about', 'benchmark', 'security', 'technology', 'audits', 'team', 'privacy-policy', 'terms-of-service', 'risk-disclosures'].includes(h);
 
 export default function About() {
-  const searchParams = useSearchParams();
-  const router = useRouter();
   const [highlightedSection, setHighlightedSection] = useState<string | null>(null);
-  const [contentType, setContentType] = useState<ContentType>(getInitialContentType(searchParams.get("section")));
-  const [activeTermsSheet, setActiveTermsSheet] = useState<TermsSheet>(getInitialTermsSheet(searchParams.get("termsType")));
+  const [contentType, setContentType] = useState<ContentType>();
   const [isMobileMenuExpanded, setIsMobileMenuExpanded] = useState(false);
 
-  const changeContentType = (content: ContentType) => {
-    setContentType(content);
-    scrollTop();
-  }
+  const router = useRouter();
+  const searchParams = useSearchParams();
 
-  // Handle section navigation while url change
   useEffect(() => {
-    const sectionFromUrl = searchParams.get("section");
-    if(isVaildContentType(sectionFromUrl)){
-        setContentType(sectionFromUrl);
-        scrollTop();
+    const hash = window.location.hash.substring(1);
+    if(isVaildContentType(hash)){
+      if(hash !== contentType) setContentType(hash);
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchParams]);
 
-  useEffect(() => {
-    const currentSection = new URLSearchParams(window.location.search).get("section");
-    if(currentSection !== contentType){
-      router.replace('/about', {
-        scroll: false
+  const changeContent = (content: ContentType, scrollToSectionId?: string) => {
+    if(content !== contentType){
+      router.replace(`/about#${content}`, {
+        scroll: !scrollToSectionId
       });
     }
-}, [contentType, router]);
+    if(scrollToSectionId) scrollToSection(scrollToSectionId);
+  }
 
   const scrollToSection = (sectionId: string) => {
-    // Always switch to about content first if not already there
-    if (contentType !== 'about') {
-      setContentType('about');
-    }
 
     setTimeout(() => {
       const element = document.getElementById(sectionId);
@@ -85,17 +56,6 @@ export default function About() {
         }, 2000);
       }
     }, contentType !== 'about' ? 300 : 0);
-  };
-
-  const showTermsSheet = (sheet: TermsSheet) => {
-    changeContentType('terms');
-    setActiveTermsSheet(sheet);
-    setHighlightedSection(null);
-  };
-
-  const showAboutContent = () => {
-    changeContentType('about');
-    setHighlightedSection(null);
   };
 
   return (
@@ -116,28 +76,28 @@ export default function About() {
 
                     <div className="ml-4 space-y-1">
                       <button
-                        onClick={() => scrollToSection('what-is-autopilot')}
+                        onClick={() => changeContent('about', 'what-is-autopilot')}
                         className="flex items-center w-full text-left px-3 py-2 text-sm text-gray-600 hover:text-[#9159FF] hover:bg-purple-50 rounded-lg transition-colors"
                       >
                         <Info className="w-4 h-4 mr-2" />
                         What is Autopilot?
                       </button>
                       <button
-                        onClick={() => scrollToSection('benefits')}
+                        onClick={() => changeContent('about', 'benefits')}
                         className="flex items-center w-full text-left px-3 py-2 text-sm text-gray-600 hover:text-[#9159FF] hover:bg-purple-50 rounded-lg transition-colors"
                       >
                         <CheckCircle className="w-4 h-4 mr-2" />
                         Benefits
                       </button>
                       <button
-                        onClick={() => scrollToSection('how-rebalancing-works')}
+                        onClick={() => changeContent('about', 'how-rebalancing-works')}
                         className="flex items-center w-full text-left px-3 py-2 text-sm text-gray-600 hover:text-[#9159FF] hover:bg-purple-50 rounded-lg transition-colors"
                       >
                         <Settings className="w-4 h-4 mr-2" />
                         How Rebalancing Works
                       </button>
                       <button
-                        onClick={() => scrollToSection('comprehensive-yield-capture')}
+                        onClick={() => changeContent('about', 'comprehensive-yield-capture')}
                         className="flex items-center w-full text-left px-3 py-2 text-sm text-gray-600 hover:text-[#9159FF] hover:bg-purple-50 rounded-lg transition-colors"
                       >
                         <TrendingUp className="w-4 h-4 mr-2" />
@@ -156,7 +116,7 @@ export default function About() {
 
                       <div className="ml-4 space-y-1">
                         <button
-                          onClick={() => changeContentType('benchmark')}
+                          onClick={() => changeContent('benchmark')}
                           className={`flex items-center w-full text-left px-3 py-2 text-sm rounded-lg transition-colors ${
                             contentType === 'benchmark'
                               ? 'text-[#9159FF] bg-purple-50'
@@ -180,7 +140,7 @@ export default function About() {
 
                       <div className="ml-4 space-y-1">
                         <button
-                          onClick={() => changeContentType('technology')}
+                          onClick={() => changeContent('technology')}
                           className={`flex items-center w-full text-left px-3 py-2 text-sm rounded-lg transition-colors ${
                             contentType === 'technology'
                               ? 'text-[#9159FF] bg-purple-50'
@@ -191,7 +151,7 @@ export default function About() {
                           Technology
                         </button>
                         <button
-                          onClick={() => changeContentType('audits')}
+                          onClick={() => changeContent('audits')}
                           className={`flex items-center w-full text-left px-3 py-2 text-sm rounded-lg transition-colors ${
                             contentType === 'audits'
                               ? 'text-[#9159FF] bg-purple-50'
@@ -215,7 +175,7 @@ export default function About() {
 
                       <div className="ml-4 space-y-1">
                         <button
-                          onClick={() => changeContentType('security')}
+                          onClick={() => changeContent('security')}
                           className={`flex items-center w-full text-left px-3 py-2 text-sm rounded-lg transition-colors ${
                             contentType === 'security'
                               ? 'text-[#9159FF] bg-purple-50'
@@ -226,7 +186,7 @@ export default function About() {
                           Security & Risk Management
                         </button>
                         <button
-                          onClick={() => changeContentType('team')}
+                          onClick={() => changeContent('team')}
                           className={`flex items-center w-full text-left px-3 py-2 text-sm rounded-lg transition-colors ${
                             contentType === 'team'
                               ? 'text-[#9159FF] bg-purple-50'
@@ -250,9 +210,9 @@ export default function About() {
 
                       <div className="ml-4 space-y-1">
                         <button
-                          onClick={() => showTermsSheet('privacy-policy')}
+                          onClick={() => changeContent('privacy-policy')}
                           className={`flex items-center w-full text-left px-3 py-2 text-sm rounded-lg transition-colors ${
-                            contentType === 'terms' && activeTermsSheet === 'privacy-policy'
+                            contentType === 'privacy-policy'
                               ? 'text-[#9159FF] bg-purple-50'
                               : 'text-gray-600 hover:text-[#9159FF] hover:bg-purple-50'
                           }`}
@@ -260,9 +220,9 @@ export default function About() {
                           Privacy Policy
                         </button>
                         <button
-                          onClick={() => showTermsSheet('terms-of-service')}
+                          onClick={() => changeContent('terms-of-service')}
                           className={`flex items-center w-full text-left px-3 py-2 text-sm rounded-lg transition-colors ${
-                            contentType === 'terms' && activeTermsSheet === 'terms-of-service'
+                            contentType === 'terms-of-service'
                               ? 'text-[#9159FF] bg-purple-50'
                               : 'text-gray-600 hover:text-[#9159FF] hover:bg-purple-50'
                           }`}
@@ -270,9 +230,9 @@ export default function About() {
                           Terms of Service
                         </button>
                         <button
-                          onClick={() => showTermsSheet('risk-disclosures')}
+                          onClick={() => changeContent('risk-disclosures')}
                           className={`flex items-center w-full text-left px-3 py-2 text-sm rounded-lg transition-colors ${
-                            contentType === 'terms' && activeTermsSheet === 'risk-disclosures'
+                            contentType === 'risk-disclosures'
                               ? 'text-[#9159FF] bg-purple-50'
                               : 'text-gray-600 hover:text-[#9159FF] hover:bg-purple-50'
                           }`}
@@ -284,7 +244,7 @@ export default function About() {
 
                     <div className="border-t border-gray-200 mt-4 pt-4">
                       <button
-                        onClick={showAboutContent}
+                        onClick={() => changeContent("about")}
                         className={`flex items-center w-full text-left px-3 py-2 text-sm rounded-lg transition-colors ${
                           contentType === 'about'
                             ? 'text-[#9159FF] bg-purple-50'
@@ -308,6 +268,7 @@ export default function About() {
             </div>
 
             {/* Main Content Sheet */}
+            { contentType &&
             <div className="flex-1 min-w-0">
               <div className="bg-white rounded-none md:rounded-3xl shadow-none md:shadow-2xl border-0 md:border border-purple-100/50 p-4 md:p-12 mb-20 md:mb-0 overflow-hidden">
                 {contentType === 'about' ? (
@@ -531,14 +492,14 @@ export default function About() {
                   <Audits />
                 ) : contentType === 'team' ? (
                   <TeamBackground />
-                ) : contentType === 'terms' ? (
+                ) : (contentType === 'privacy-policy' || contentType === "risk-disclosures" || contentType === "terms-of-service") ? (
                   <div className="space-y-8">
                     {/* Terms Navigation Tabs */}
                     <div className="flex space-x-1 bg-gray-100 p-1 rounded-xl">
                       <button
-                        onClick={() => setActiveTermsSheet('privacy-policy')}
+                        onClick={() =>changeContent('privacy-policy')}
                         className={`flex-1 py-3 px-4 text-sm font-medium rounded-lg transition-colors ${
-                          activeTermsSheet === 'privacy-policy'
+                          contentType === 'privacy-policy'
                             ? 'bg-white text-[#9159FF] shadow-sm'
                             : 'text-gray-600 hover:text-[#9159FF]'
                         }`}
@@ -546,9 +507,9 @@ export default function About() {
                         Privacy Policy
                       </button>
                       <button
-                        onClick={() => setActiveTermsSheet('terms-of-service')}
+                        onClick={() => changeContent('terms-of-service')}
                         className={`flex-1 py-3 px-4 text-sm font-medium rounded-lg transition-colors ${
-                          activeTermsSheet === 'terms-of-service'
+                          contentType === 'terms-of-service'
                             ? 'bg-white text-[#9159FF] shadow-sm'
                             : 'text-gray-600 hover:text-[#9159FF]'
                         }`}
@@ -556,9 +517,9 @@ export default function About() {
                         Terms of Service
                       </button>
                       <button
-                        onClick={() => setActiveTermsSheet('risk-disclosures')}
+                        onClick={() => changeContent('risk-disclosures')}
                         className={`flex-1 py-3 px-4 text-sm font-medium rounded-lg transition-colors ${
-                          activeTermsSheet === 'risk-disclosures'
+                          contentType === 'risk-disclosures'
                             ? 'bg-white text-[#9159FF] shadow-sm'
                             : 'text-gray-600 hover:text-[#9159FF]'
                         }`}
@@ -568,7 +529,7 @@ export default function About() {
                     </div>
 
                     {/* Terms Content */}
-                    {activeTermsSheet === 'privacy-policy' && (
+                    {contentType === 'privacy-policy' && (
                       <div className="space-y-6">
                         <h1 className="text-3xl font-bold text-gray-900">Privacy Policy</h1>
                         <div className="prose prose-lg max-w-none">
@@ -710,7 +671,7 @@ export default function About() {
                       </div>
                     )}
 
-                    {activeTermsSheet === 'terms-of-service' && (
+                    {contentType === 'terms-of-service' && (
                       <div className="space-y-6">
                         <h1 className="text-3xl font-bold text-gray-900">Terms of Service</h1>
                         <div className="prose prose-lg max-w-none">
@@ -896,7 +857,7 @@ export default function About() {
                       </div>
                     )}
 
-                    {activeTermsSheet === 'risk-disclosures' && (
+                    {contentType === 'risk-disclosures' && (
                       <div className="space-y-6">
                         <h1 className="text-3xl font-bold text-gray-900">Risk Disclosures</h1>
                         <div className="prose prose-lg max-w-none">
@@ -1114,6 +1075,7 @@ export default function About() {
                 ) : null}
               </div>
             </div>
+            }
           </div>
         </div>
 
@@ -1129,7 +1091,7 @@ export default function About() {
                   {/* About Sections */}
                   <button
                     onClick={() => {
-                      scrollToSection('what-is-autopilot');
+                      changeContent('about', 'what-is-autopilot');
                       setIsMobileMenuExpanded(false);
                     }}
                     className="flex items-center p-3 rounded-xl text-gray-700 hover:bg-purple-50 hover:text-[#9159FF] transition-all duration-200"
@@ -1140,7 +1102,7 @@ export default function About() {
 
                   <button
                     onClick={() => {
-                      scrollToSection('benefits');
+                      changeContent('about', 'benefits');
                       setIsMobileMenuExpanded(false);
                     }}
                     className="flex items-center p-3 rounded-xl text-gray-700 hover:bg-purple-50 hover:text-[#9159FF] transition-all duration-200"
@@ -1151,7 +1113,7 @@ export default function About() {
 
                   <button
                     onClick={() => {
-                      scrollToSection('how-rebalancing-works');
+                      changeContent('about', 'how-rebalancing-works');
                       setIsMobileMenuExpanded(false);
                     }}
                     className="flex items-center p-3 rounded-xl text-gray-700 hover:bg-purple-50 hover:text-[#9159FF] transition-all duration-200"
@@ -1162,7 +1124,7 @@ export default function About() {
 
                   <button
                     onClick={() => {
-                      scrollToSection('comprehensive-yield-capture');
+                      changeContent('about', 'comprehensive-yield-capture');
                       setIsMobileMenuExpanded(false);
                     }}
                     className="flex items-center p-3 rounded-xl text-gray-700 hover:bg-purple-50 hover:text-[#9159FF] transition-all duration-200"
@@ -1174,7 +1136,7 @@ export default function About() {
                   {/* Performance Analysis */}
                   <button
                     onClick={() => {
-                      changeContentType('benchmark');
+                      changeContent('benchmark');
                       setIsMobileMenuExpanded(false);
                     }}
                     className={`flex items-center p-3 rounded-xl transition-all duration-200 ${
@@ -1190,7 +1152,7 @@ export default function About() {
                   {/* Technology & Audits */}
                   <button
                     onClick={() => {
-                      changeContentType('technology');
+                      changeContent('technology');
                       setIsMobileMenuExpanded(false);
                     }}
                     className={`flex items-center p-3 rounded-xl transition-all duration-200 ${
@@ -1205,7 +1167,7 @@ export default function About() {
 
                   <button
                     onClick={() => {
-                      changeContentType('audits');
+                      changeContent('audits');
                       setIsMobileMenuExpanded(false);
                     }}
                     className={`flex items-center p-3 rounded-xl transition-all duration-200 ${
@@ -1220,7 +1182,7 @@ export default function About() {
 
                   <button
                     onClick={() => {
-                      changeContentType('security');
+                      changeContent('security');
                       setIsMobileMenuExpanded(false);
                     }}
                     className={`flex items-center p-3 rounded-xl transition-all duration-200 ${
@@ -1235,7 +1197,7 @@ export default function About() {
 
                   <button
                     onClick={() => {
-                      changeContentType('team');
+                      changeContent('team');
                       setIsMobileMenuExpanded(false);
                     }}
                     className={`flex items-center p-3 rounded-xl transition-all duration-200 ${
@@ -1251,11 +1213,11 @@ export default function About() {
                   {/* Terms */}
                   <button
                     onClick={() => {
-                      showTermsSheet('terms-of-service');
+                      changeContent('terms-of-service');
                       setIsMobileMenuExpanded(false);
                     }}
                     className={`flex items-center p-3 rounded-xl transition-all duration-200 ${
-                      contentType === 'terms' && activeTermsSheet === 'terms-of-service'
+                      (contentType === 'terms-of-service' || contentType === 'privacy-policy' || contentType === 'risk-disclosures')
                         ? 'bg-[#9159FF] text-white'
                         : 'text-gray-700 hover:bg-purple-50 hover:text-[#9159FF]'
                     }`}
