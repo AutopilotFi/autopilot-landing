@@ -287,9 +287,13 @@ export default function About() {
                       <Info className="w-5 h-5 mr-2 text-[#9159FF]" />
                       What is Autopilot Finance?
                     </h2>
-                    <p className="text-lg text-gray-700 leading-relaxed">
-                      Autopilot uses high-frequency rebalancing algorithms to maximize yield potential for Morpho lenders. It automatically allocates liquidity across multiple vaults in the Morpho ecosystem, enabling efficient allocation without manual rebalancing. Users can supply liquidity to an Autopilot vault once, and stay exposed to the most-efficient Morpho vaults at all times. Autopilot can rebalance up to several times per hour - achieving efficiency unmatched by manual management.
-                    </p>
+                    <p className="text-lg text-gray-700 leading-relaxed">Autopilot is a yield optimizer for Morpho lenders.</p>
+
+                    <p className="text-lg text-gray-700 leading-relaxed">It constantly analyzes the Morpho ecosystem, identifying the most efficient yield sources at any given moment.</p>
+
+                    <p className="text-lg text-gray-700 leading-relaxed">When a better opportunity arises, Autopilot automatically reallocates liquidity to keep its users exposed to the top-performing setup. Reallocations are powered by a high-frequency algorithm that adapts instantly as conditions change.</p>
+
+                    <p className="text-lg text-gray-700 leading-relaxed"> Over time, this process provides higher yield potential than any single Morpho vault managed manually.</p>
                   </div>
 
                   {/* Benefits */}
