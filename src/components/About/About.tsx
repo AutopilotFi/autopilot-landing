@@ -337,7 +337,7 @@ export default function About() {
                       <div className="space-y-3">
                         <h3 className="text-lg font-medium text-gray-900 flex items-center">
                           <CheckCircle className="w-5 h-5 mr-3 text-[#9159FF]" />
-                          Always Allocated to the Most Efficient Morpho Vaults
+                          Automated Allocation to the Most Efficient Morpho Vaults
                         </h3>
                         <div className="ml-8 space-y-3 leading-relaxed">
                           <p>Morpho offers a range of vaults from different curators, each with its own performance profile.</p>
@@ -390,7 +390,7 @@ export default function About() {
                             </li>
                             <li className="flex items-start">
                               <div className="w-1.5 h-1.5 rounded-full bg-gray-400 mr-3 mt-2 flex-shrink-0"></div>
-                              <span>In certain jurisdictions, manage potential tax implications with every reallocation or withdrawal</span>
+                              <span>In certain jurisdictions user performed withdrawal and deposits may have potential tax implications with every transaction</span>
                             </li>
                           </ul>
                           <p>Autopilot&apos;s algorithm handles this automatically, without sacrificing transparency or user control.</p>
