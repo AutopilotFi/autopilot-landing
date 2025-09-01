@@ -62,7 +62,7 @@ export default function Header({whiteTheme} : {
         {
           <nav className="hidden md:flex items-center justify-center space-x-8">
             <Link
-              href={"/about#about"}
+              href={"/about"}
               className={clsx((whiteTheme ? "text-black" : "text-white"), "nav-badge-glass group active:scale-95")}
             >
               <TrendingUp className="nav-badge-icon" />
@@ -117,7 +117,7 @@ export default function Header({whiteTheme} : {
             {/* Main Navigation Links */}
             <div className="space-y-3">
               <Link
-                href="/about#about"
+                href="/about"
                 onClick={closeMobileMenu}
                 className="flex items-center p-4 rounded-xl transition-all duration-200 text-gray-700 hover:bg-gradient-to-r hover:from-purple-100 hover:to-purple-200 hover:text-[#9159FF] w-full group"
               >

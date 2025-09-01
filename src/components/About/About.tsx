@@ -27,14 +27,24 @@ export default function About() {
     if(isVaildContentType(hash)){
       if(hash !== contentType) setContentType(hash);
     }
+    else{
+      if(contentType !== "about") setContentType("about");
+    }
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchParams]);
 
   const changeContent = (content: ContentType, scrollToSectionId?: string) => {
     if(content !== contentType){
-      router.replace(`/about#${content}`, {
-        scroll: !scrollToSectionId
-      });
+      if(content !== "about"){
+          router.replace(`/about#${content}`, {
+            scroll: !scrollToSectionId
+          });
+      }
+      else{
+          router.replace(`/about`, {
+            scroll: !scrollToSectionId
+          });
+      }
     }
     if(scrollToSectionId) scrollToSection(scrollToSectionId);
   }
