@@ -1,17 +1,12 @@
 import { Suspense } from "react";
-import About from "@/components/About"
-import Header from "@/components/Header"
+import About from "@/components/About";
 
-export default function AboutRoute(){
-
-    return(
-        <Suspense>
-            <div>
-                <Header/>
-                <main>
-                    <About/>
-                </main>
-            </div>
-        </Suspense>
-    )
+export default function AboutRoute() {
+  return (
+    <Suspense>
+      <main>
+        <About />
+      </main>
+    </Suspense>
+  );
 }

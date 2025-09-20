@@ -1,13 +1,9 @@
 import { TrendingUp, Shield, Zap, PlayCircle } from "lucide-react";
 import Image from "next/image";
 
-
 export default function HeroSection() {
-
   return (
-    <section
-      className="relative max-w-[1920px] mx-auto pt-32 pb-32 2xl:pt-42 2xl:pb-42 overflow-hidden bg-grandient"
-    >
+    <section className="relative max-w-[1920px] mx-auto pt-32 pb-32 2xl:pt-42 2xl:pb-42 overflow-hidden bg-grandient">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Column - Hero Content */}
@@ -23,12 +19,12 @@ export default function HeroSection() {
               <span className="text-white">Autopilot for</span>
               <br />
               <span className="text-[#9159FF]">Morpho Lenders</span>
-
             </h1>
 
             {/* Subheadline */}
             <p className="text-xl text-[#CDCDCD] mb-8 max-w-lg mx-auto lg:mx-0">
-              Supply once, and let Autopilot allocate to the best-performing Morpho vaults automatically.
+              Supply once, and let Autopilot allocate to the best-performing
+              Morpho vaults automatically.
             </p>
 
             {/* Trust Badges */}
@@ -50,7 +46,13 @@ export default function HeroSection() {
                 className="inline-flex items-center px-8 py-4 bg-[#9159FF] hover:bg-[#7c3aed] text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl my-0"
               >
                 Launching Soon
-                <Image src="/launchIcon.png" width={17.5} height={17.5} alt="Launch Icon" className="ml-2 w-5 h-5" />
+                <Image
+                  src="/launchIcon.png"
+                  width={17.5}
+                  height={17.5}
+                  alt="Launch Icon"
+                  className="ml-2 w-5 h-5"
+                />
               </button>
 
               <a
@@ -77,12 +79,18 @@ export default function HeroSection() {
                   <div className="flex items-center space-x-3">
                     <div className="w-2 h-2 bg-[#9159FF] rounded-full animate-[var(--animate-gentle-blink)]"></div>
                     <div>
-                      <div className="font-semibold text-gray-900">Autopilot USDC</div>
-                      <div className="text-xs text-gray-500">Morpho-optimizer</div>
+                      <div className="font-semibold text-gray-900">
+                        Autopilot USDC
+                      </div>
+                      <div className="text-xs text-gray-500">
+                        Morpho-optimizer
+                      </div>
                     </div>
                   </div>
                   <div className="text-right">
-                    <div className="text-xl font-bold text-[#9159FF]">10.37%</div>
+                    <div className="text-xl font-bold text-[#9159FF]">
+                      10.37%
+                    </div>
                     <div className="text-xs text-gray-500">6m APY</div>
                   </div>
                 </div>
@@ -92,12 +100,16 @@ export default function HeroSection() {
                   <div className="flex items-center space-x-3">
                     <div className="w-2 h-2 bg-gray-400 rounded-full"></div>
                     <div>
-                      <div className="font-medium text-gray-900">MEV Capital USDC</div>
+                      <div className="font-medium text-gray-900">
+                        MEV Capital USDC
+                      </div>
                       <div className="text-xs text-gray-500">Morpho Vault</div>
                     </div>
                   </div>
                   <div className="text-right">
-                    <div className="text-lg font-semibold text-gray-900">9.93%</div>
+                    <div className="text-lg font-semibold text-gray-900">
+                      9.93%
+                    </div>
                     <div className="text-xs text-gray-500">6m APY</div>
                   </div>
                 </div>
@@ -107,12 +119,16 @@ export default function HeroSection() {
                   <div className="flex items-center space-x-3">
                     <div className="w-2 h-2 bg-gray-400 rounded-full"></div>
                     <div>
-                      <div className="font-medium text-gray-900">Relend USDC</div>
+                      <div className="font-medium text-gray-900">
+                        Relend USDC
+                      </div>
                       <div className="text-xs text-gray-500">Morpho Vault</div>
                     </div>
                   </div>
                   <div className="text-right">
-                    <div className="text-lg font-semibold text-gray-900">9.19%</div>
+                    <div className="text-lg font-semibold text-gray-900">
+                      9.19%
+                    </div>
                     <div className="text-xs text-gray-500">6m APY</div>
                   </div>
                 </div>
@@ -122,12 +138,16 @@ export default function HeroSection() {
                   <div className="flex items-center space-x-3">
                     <div className="w-2 h-2 bg-gray-400 rounded-full"></div>
                     <div>
-                      <div className="font-medium text-gray-900">Smokehouse USDC</div>
+                      <div className="font-medium text-gray-900">
+                        Smokehouse USDC
+                      </div>
                       <div className="text-xs text-gray-500">Morpho Vault</div>
                     </div>
                   </div>
                   <div className="text-right">
-                    <div className="text-lg font-semibold text-gray-900">8.77%</div>
+                    <div className="text-lg font-semibold text-gray-900">
+                      8.77%
+                    </div>
                     <div className="text-xs text-gray-500">6m APY</div>
                   </div>
                 </div>
@@ -137,8 +157,12 @@ export default function HeroSection() {
               <div className="mt-6 pt-4 border-t border-gray-100">
                 <div className="space-x-1 text-sm">
                   <TrendingUp className="w-4 h-4 text-[#9159FF] inline" />
-                  <span className="text-[#9159FF] font-medium">Leading performance</span>
-                  <span className="text-gray-500">with high-frequency rebalancing</span>
+                  <span className="text-[#9159FF] font-medium">
+                    Leading performance
+                  </span>
+                  <span className="text-gray-500">
+                    with high-frequency rebalancing
+                  </span>
                 </div>
               </div>
             </div>

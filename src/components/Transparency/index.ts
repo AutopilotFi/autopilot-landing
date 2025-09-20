@@ -1,1 +1,1 @@
-export {default} from "./Transparency";
+export { default } from "./Transparency";

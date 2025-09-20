@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -10,14 +10,14 @@
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
-  --primary: #9159FF;
+  --primary: #9159ff;
   --primary-foreground: #ffffff;
   --secondary: oklch(0.95 0.0058 264.53);
   --secondary-foreground: #030213;
   --muted: #ececf0;
   --muted-foreground: #717182;
   --accent: #faf5ff;
-  --accent-foreground: #9159FF;
+  --accent-foreground: #9159ff;
   --destructive: #d4183d;
   --destructive-foreground: #ffffff;
   --border: rgba(145, 89, 255, 0.15);
@@ -27,7 +27,7 @@
   --font-weight-bold: 700;
   --font-weight-medium: 500;
   --font-weight-normal: 400;
-  --ring: #9159FF;
+  --ring: #9159ff;
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
@@ -40,53 +40,53 @@
   --radius-xl: 1rem;
   --sidebar: oklch(0.985 0 0);
   --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: #9159FF;
+  --sidebar-primary: #9159ff;
   --sidebar-primary-foreground: #ffffff;
   --sidebar-accent: #faf5ff;
-  --sidebar-accent-foreground: #9159FF;
+  --sidebar-accent-foreground: #9159ff;
   --sidebar-border: rgba(145, 89, 255, 0.15);
-  --sidebar-ring: #9159FF;
+  --sidebar-ring: #9159ff;
 
   /* Strong Autopilot Brand Identity - Purple Primary */
-  --autopilot-brand-purple: #9159FF;            /* Primary brand purple */
-  --autopilot-brand-purple-dark: #7c3aed;       /* Dark brand purple */
-  --autopilot-brand-purple-light: #a78bfa;      /* Light brand purple */
-  --autopilot-brand-purple-vivid: #8b5cf6;      /* Vivid accent purple */
-  --autopilot-brand-dark: #181a20;              /* Brand dark color */
-  --autopilot-brand-dark-light: #1f2937;        /* Lighter dark variant */
-  --autopilot-brand-dark-lighter: #374151;      /* Even lighter dark */
+  --autopilot-brand-purple: #9159ff; /* Primary brand purple */
+  --autopilot-brand-purple-dark: #7c3aed; /* Dark brand purple */
+  --autopilot-brand-purple-light: #a78bfa; /* Light brand purple */
+  --autopilot-brand-purple-vivid: #8b5cf6; /* Vivid accent purple */
+  --autopilot-brand-dark: #181a20; /* Brand dark color */
+  --autopilot-brand-dark-light: #1f2937; /* Lighter dark variant */
+  --autopilot-brand-dark-lighter: #374151; /* Even lighter dark */
 
   /* Live/Active Status - Keep Green */
-  --autopilot-status-green: #22c55e;            /* Live status green */
-  --autopilot-status-green-dark: #16a34a;       /* Dark status green */
-  --autopilot-status-green-light: #4ade80;      /* Light status green */
+  --autopilot-status-green: #22c55e; /* Live status green */
+  --autopilot-status-green-dark: #16a34a; /* Dark status green */
+  --autopilot-status-green-light: #4ade80; /* Light status green */
 
   /* Protocol-specific colors */
-  --morpho-brand-color: #2973FF;                /* Morpho blue */
-  --euler-brand-color: #23c09b;                 /* Euler green */
+  --morpho-brand-color: #2973ff; /* Morpho blue */
+  --euler-brand-color: #23c09b; /* Euler green */
 
   /* Brand surfaces - Purple themed */
-  --autopilot-surface-primary: #faf5ff;         /* Light purple surface */
-  --autopilot-surface-secondary: #f3e8ff;       /* Medium purple surface */
-  --autopilot-surface-dark: #181a20;            /* Dark surface */
-  --autopilot-surface-dark-elevated: #1f2937;   /* Elevated dark surface */
+  --autopilot-surface-primary: #faf5ff; /* Light purple surface */
+  --autopilot-surface-secondary: #f3e8ff; /* Medium purple surface */
+  --autopilot-surface-dark: #181a20; /* Dark surface */
+  --autopilot-surface-dark-elevated: #1f2937; /* Elevated dark surface */
 
   /* Brand borders and accents - Purple themed */
-  --autopilot-border-light: #ddd6fe;            /* Light purple border */
-  --autopilot-border-medium: #c4b5fd;           /* Medium purple border */
-  --autopilot-border-dark: #374151;             /* Dark border */
+  --autopilot-border-light: #ddd6fe; /* Light purple border */
+  --autopilot-border-medium: #c4b5fd; /* Medium purple border */
+  --autopilot-border-dark: #374151; /* Dark border */
 
   /* Text colors for brand */
-  --autopilot-text-on-light: #581c87;           /* Dark purple text on light */
-  --autopilot-text-on-dark: #f3e8ff;            /* Light purple text on dark */
-  --autopilot-text-muted-light: #6b7280;        /* Muted text on light */
-  --autopilot-text-muted-dark: #9ca3af;         /* Muted text on dark */
+  --autopilot-text-on-light: #581c87; /* Dark purple text on light */
+  --autopilot-text-on-dark: #f3e8ff; /* Light purple text on dark */
+  --autopilot-text-muted-light: #6b7280; /* Muted text on light */
+  --autopilot-text-muted-dark: #9ca3af; /* Muted text on dark */
 
   /* Status colors with brand harmony */
-  --autopilot-success: #22c55e;                 /* Success state - keep green */
-  --autopilot-warning: #f59e0b;                 /* Warning state */
-  --autopilot-error: #ef4444;                   /* Error state */
-  --autopilot-info: #9159FF;                    /* Info state - now purple */
+  --autopilot-success: #22c55e; /* Success state - keep green */
+  --autopilot-warning: #f59e0b; /* Warning state */
+  --autopilot-error: #ef4444; /* Error state */
+  --autopilot-info: #9159ff; /* Info state - now purple */
 }
 
 .dark {
@@ -113,7 +113,8 @@
 
 /* Define keyframes for custom animations */
 @keyframes gentleBlink {
-  0%, 85% {
+  0%,
+  85% {
     opacity: 1;
   }
   95% {
@@ -125,7 +126,8 @@
 }
 
 @keyframes brandPulse {
-  0%, 100% {
+  0%,
+  100% {
     box-shadow: 0 0 20px rgba(145, 89, 255, 0.4);
   }
   50% {
@@ -134,7 +136,8 @@
 }
 
 @keyframes brandGlow {
-  0%, 100% {
+  0%,
+  100% {
     filter: drop-shadow(0 0 8px rgba(145, 89, 255, 0.3));
   }
   50% {
@@ -143,7 +146,8 @@
 }
 
 @keyframes brandFloat {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0px);
   }
   50% {
@@ -196,7 +200,8 @@
 }
 
 @keyframes pulseGlow {
-  0%, 100% {
+  0%,
+  100% {
     box-shadow: 0 0 15px rgba(145, 89, 255, 0.3);
   }
   50% {
@@ -242,7 +247,8 @@
 }
 
 @keyframes glowPulse {
-  0%, 100% {
+  0%,
+  100% {
     filter: drop-shadow(0 0 8px rgba(145, 89, 255, 0.4));
   }
   50% {
@@ -257,7 +263,7 @@
   }
   100% {
     background-color: #faf5ff;
-    border-color: #9159FF;
+    border-color: #9159ff;
   }
 }
 
@@ -271,7 +277,8 @@
 }
 
 @keyframes bounce-subtle {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {
@@ -437,12 +444,20 @@
 
   .autopilot-btn-primary {
     @apply rounded-2xl px-8 py-4 font-bold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105;
-    background: linear-gradient(135deg, var(--autopilot-brand-purple), var(--autopilot-brand-purple-vivid));
+    background: linear-gradient(
+      135deg,
+      var(--autopilot-brand-purple),
+      var(--autopilot-brand-purple-vivid)
+    );
     color: white;
   }
 
   .autopilot-btn-primary:hover {
-    background: linear-gradient(135deg, var(--autopilot-brand-purple-dark), var(--autopilot-brand-purple));
+    background: linear-gradient(
+      135deg,
+      var(--autopilot-brand-purple-dark),
+      var(--autopilot-brand-purple)
+    );
   }
 
   .autopilot-btn-secondary {
@@ -479,21 +494,37 @@
   }
 
   .autopilot-surface-brand {
-    background: linear-gradient(135deg, var(--autopilot-surface-primary) 0%, var(--autopilot-surface-secondary) 100%);
+    background: linear-gradient(
+      135deg,
+      var(--autopilot-surface-primary) 0%,
+      var(--autopilot-surface-secondary) 100%
+    );
   }
 
   .autopilot-gradient-text {
     @apply bg-gradient-to-r bg-clip-text text-transparent font-bold;
-    background-image: linear-gradient(135deg, var(--autopilot-brand-purple), var(--autopilot-brand-purple-vivid));
+    background-image: linear-gradient(
+      135deg,
+      var(--autopilot-brand-purple),
+      var(--autopilot-brand-purple-vivid)
+    );
   }
 
   .autopilot-gradient-bg {
-    background: linear-gradient(135deg, var(--autopilot-brand-purple), var(--autopilot-brand-purple-vivid));
+    background: linear-gradient(
+      135deg,
+      var(--autopilot-brand-purple),
+      var(--autopilot-brand-purple-vivid)
+    );
   }
 
   .autopilot-logo-mark {
     @apply w-10 h-10 rounded-2xl flex items-center justify-center font-black text-xl;
-    background: linear-gradient(135deg, var(--autopilot-brand-purple), var(--autopilot-brand-purple-vivid));
+    background: linear-gradient(
+      135deg,
+      var(--autopilot-brand-purple),
+      var(--autopilot-brand-purple-vivid)
+    );
     color: white;
     box-shadow: 0 8px 32px rgba(145, 89, 255, 0.3);
   }
@@ -501,7 +532,11 @@
   .autopilot-brand-accent {
     @apply border-l-4 pl-4;
     border-color: var(--autopilot-brand-purple);
-    background: linear-gradient(90deg, var(--autopilot-surface-primary), transparent);
+    background: linear-gradient(
+      90deg,
+      var(--autopilot-surface-primary),
+      transparent
+    );
   }
 
   /* Protocol-specific text colors */
@@ -590,7 +625,7 @@
 
 /* Flow dot positioning along path */
 .flow-dot {
-  offset-path: path('M 0 0 Q 100 -50 200 0');
+  offset-path: path("M 0 0 Q 100 -50 200 0");
   offset-rotate: 0deg;
 }
 
@@ -601,16 +636,27 @@
 
 .feature-card-hover:hover {
   transform: translateY(-2px);
-  box-shadow: 0 20px 25px -5px rgba(145, 89, 255, 0.1), 0 10px 10px -5px rgba(145, 89, 255, 0.04);
+  box-shadow:
+    0 20px 25px -5px rgba(145, 89, 255, 0.1),
+    0 10px 10px -5px rgba(145, 89, 255, 0.04);
 }
 
 /* Gradient backgrounds with brand colors */
 .gradient-bg-brand {
-  background: linear-gradient(135deg, var(--autopilot-surface-primary) 0%, var(--autopilot-surface-secondary) 50%, var(--autopilot-border-light) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--autopilot-surface-primary) 0%,
+    var(--autopilot-surface-secondary) 50%,
+    var(--autopilot-border-light) 100%
+  );
 }
 
 .gradient-bg-dark {
-  background: linear-gradient(135deg, var(--autopilot-brand-dark) 0%, var(--autopilot-brand-dark-light) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--autopilot-brand-dark) 0%,
+    var(--autopilot-brand-dark-light) 100%
+  );
 }
 
 html {
@@ -619,11 +665,11 @@ html {
 
 /* Hide scrollbars for horizontal scroll containers */
 .scrollbar-hide {
-  -ms-overflow-style: none;  /* Internet Explorer 10+ */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
 }
 .scrollbar-hide::-webkit-scrollbar {
-  display: none;  /* Safari and Chrome */
+  display: none; /* Safari and Chrome */
 }
 
 /* Smooth scroll behavior */
@@ -760,13 +806,18 @@ html {
 }
 
 .nav-badge::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(145, 89, 255, 0.1), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(145, 89, 255, 0.1),
+    transparent
+  );
   transition: left 0.5s ease;
 }
 
@@ -817,7 +868,7 @@ html {
 }
 
 .nav-badge-minimal::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -839,7 +890,11 @@ html {
 /* Elegant pill badge */
 .nav-badge-pill {
   @apply inline-flex items-center px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(248, 250, 252, 0.9));
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.8),
+    rgba(248, 250, 252, 0.9)
+  );
   border: 1px solid rgba(145, 89, 255, 0.15);
   backdrop-filter: blur(10px);
   color: #475569;
@@ -847,7 +902,11 @@ html {
 }
 
 .nav-badge-pill:hover {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(250, 245, 255, 0.9));
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.95),
+    rgba(250, 245, 255, 0.9)
+  );
   border-color: rgba(145, 89, 255, 0.4);
   color: var(--autopilot-brand-purple);
   transform: translateY(-1px);
@@ -879,13 +938,18 @@ html {
 }
 
 .nav-badge-glass::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
   transition: left 0.6s ease;
 }
 
@@ -915,14 +979,18 @@ html {
   background: rgba(255, 255, 255, 0.9);
   border: 1px solid rgba(226, 232, 240, 0.8);
   color: #475569;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+  box-shadow:
+    0 1px 3px rgba(0, 0, 0, 0.1),
+    0 1px 2px rgba(0, 0, 0, 0.06);
 }
 
 .nav-badge-shadow:hover {
   background: rgba(255, 255, 255, 1);
   border-color: rgba(145, 89, 255, 0.3);
   color: var(--autopilot-brand-purple);
-  box-shadow: 0 4px 12px rgba(145, 89, 255, 0.15), 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow:
+    0 4px 12px rgba(145, 89, 255, 0.15),
+    0 2px 4px rgba(0, 0, 0, 0.1);
   transform: translateY(-1px);
 }
 
@@ -936,13 +1004,19 @@ html {
 }
 
 .nav-badge-refined::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   padding: 1.5px;
-  background: linear-gradient(135deg, rgba(145, 89, 255, 0.1), rgba(145, 89, 255, 0.05));
+  background: linear-gradient(
+    135deg,
+    rgba(145, 89, 255, 0.1),
+    rgba(145, 89, 255, 0.05)
+  );
   border-radius: inherit;
-  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
   mask-composite: exclude;
   opacity: 0;
   transition: opacity 0.3s ease;
@@ -972,7 +1046,12 @@ html {
 
 /* Purple-branded loading and skeleton styles */
 .skeleton {
-  background: linear-gradient(90deg, var(--autopilot-surface-primary) 25%, var(--autopilot-surface-secondary) 50%, var(--autopilot-surface-primary) 75%);
+  background: linear-gradient(
+    90deg,
+    var(--autopilot-surface-primary) 25%,
+    var(--autopilot-surface-secondary) 50%,
+    var(--autopilot-surface-primary) 75%
+  );
   background-size: 200% 100%;
   animation: shimmer 1.5s infinite;
 }
@@ -984,18 +1063,24 @@ html {
 
 /* Subtle dotted background pattern for hero section */
 .hero-dots-pattern {
-  background-image: radial-gradient(circle, rgba(145, 89, 255, 0.08) 1px, transparent 1px);
+  background-image: radial-gradient(
+    circle,
+    rgba(145, 89, 255, 0.08) 1px,
+    transparent 1px
+  );
   background-size: 24px 24px;
-  background-position: 0 0, 12px 12px;
+  background-position:
+    0 0,
+    12px 12px;
 }
 
-.bg-grandient{
-  background-image: url('/mobile-bg-gradient.png');
+.bg-grandient {
+  background-image: url("/mobile-bg-gradient.png");
   background-size: cover;
 }
 
-@media(min-width: 768px){
-  .bg-grandient{
-      background-image: url('/bg-gradient.png');
+@media (min-width: 768px) {
+  .bg-grandient {
+    background-image: url("/bg-gradient.png");
   }
 }
