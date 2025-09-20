@@ -11,7 +11,8 @@ export function Technology() {
         </h2>
         <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
           <p>
-            Tiered architecture combining infrastructure from multiple proven providers for performance, reliability, and security.
+            Tiered architecture combining infrastructure from multiple proven
+            providers for performance, reliability, and security.
           </p>
 
           {/* Top Layer */}
@@ -20,9 +21,18 @@ export function Technology() {
               Autopilot Vault (Top Layer)
             </h3>
             <div className="space-y-3 text-gray-700">
-              <p>Built and powered by IPOR Labs AG, permissionless design akin to Morpho vaults.</p>
-              <p>Houses the optimization algorithm tailored for Autopilot.Finance.</p>
-              <p>Continuously evaluates eligible Morpho vaults and reallocates liquidity in real time.</p>
+              <p>
+                Built and powered by IPOR Labs AG, permissionless design akin to
+                Morpho vaults.
+              </p>
+              <p>
+                Houses the optimization algorithm tailored for
+                Autopilot.Finance.
+              </p>
+              <p>
+                Continuously evaluates eligible Morpho vaults and reallocates
+                liquidity in real time.
+              </p>
             </div>
           </div>
 
@@ -32,8 +42,15 @@ export function Technology() {
               Harvest Auto-Compounders (Middle Layer)
             </h3>
             <div className="space-y-3 text-gray-700">
-              <p>Operated by Harvest Finance, with over 4 years of uninterrupted vault operations.</p>
-              <p>Accrues lending interest, claims incentives, rewards or points programs then auto-compounds into the underlying token (e.g., USDC, WETH).</p>
+              <p>
+                Operated by Harvest Finance, with over 4 years of uninterrupted
+                vault operations.
+              </p>
+              <p>
+                Accrues lending interest, claims incentives, rewards or points
+                programs then auto-compounds into the underlying token (e.g.,
+                USDC, WETH).
+              </p>
             </div>
           </div>
 
@@ -43,8 +60,15 @@ export function Technology() {
               Morpho Vaults (Base Layer)
             </h3>
             <div className="space-y-3 text-gray-700">
-              <p>A permissionless, non-custodial lending protocol. Primary yield source for Autopilot strategies. Instant liquidity setups only.</p>
-              <p>Autopilot&apos;s liquidity can be allocated across multiple vaults or concentrated in a single vault for optimal performance.</p>
+              <p>
+                A permissionless, non-custodial lending protocol. Primary yield
+                source for Autopilot strategies. Instant liquidity setups only.
+              </p>
+              <p>
+                Autopilot&apos;s liquidity can be allocated across multiple
+                vaults or concentrated in a single vault for optimal
+                performance.
+              </p>
             </div>
           </div>
         </div>

@@ -1,1 +1,1 @@
-export {default} from "./AppPreview"
+export { default } from "./AppPreview";

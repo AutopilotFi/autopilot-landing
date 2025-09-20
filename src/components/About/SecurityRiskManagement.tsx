@@ -12,25 +12,41 @@ export function SecurityRiskManagement() {
         <div className="space-y-4 text-lg text-gray-700 leading-relaxed">
           <div className="flex items-start">
             <CheckCircle className="w-5 h-5 mr-3 mt-0.5 text-[#22c55e] flex-shrink-0" />
-            <span>Autopilot is non-custodial — liquidity remains in user&apos;s control inside audited smart contracts</span>
+            <span>
+              Autopilot is non-custodial — liquidity remains in user&apos;s
+              control inside audited smart contracts
+            </span>
           </div>
 
-
           <div className="flex items-start">
             <CheckCircle className="w-5 h-5 mr-3 mt-0.5 text-[#22c55e] flex-shrink-0" />
-            <span>Withdrawals from the Autopilot vault itself can only be initiated by the vault&apos;s users</span>
+            <span>
+              Withdrawals from the Autopilot vault itself can only be initiated
+              by the vault&apos;s users
+            </span>
           </div>
           <div className="flex items-start">
             <CheckCircle className="w-5 h-5 mr-3 mt-0.5 text-[#22c55e] flex-shrink-0" />
-            <span>Neither the Autopilot team nor any infrastructure provider has the ability to move liquidity out of these vaults</span>
+            <span>
+              Neither the Autopilot team nor any infrastructure provider has the
+              ability to move liquidity out of these vaults
+            </span>
           </div>
           <div className="flex items-start">
             <CheckCircle className="w-5 h-5 mr-3 mt-0.5 text-[#22c55e] flex-shrink-0" />
-            <span>In case of emergency, the team can trigger withdrawals only from the underlying vaults to safeguard funds</span>
+            <span>
+              In case of emergency, the team can trigger withdrawals only from
+              the underlying vaults to safeguard funds
+            </span>
           </div>
           <div className="flex items-start">
             <CheckCircle className="w-5 h-5 mr-3 mt-0.5 text-[#22c55e] flex-shrink-0" />
-            <span>Autopilot vaults are launched via IPOR technologies, while remaining permissionless building blocks in line with Morpho&apos;s principles. Even if IPOR were no longer active, the Autopilot vaults would remain fully accessible and operational</span>
+            <span>
+              Autopilot vaults are launched via IPOR technologies, while
+              remaining permissionless building blocks in line with
+              Morpho&apos;s principles. Even if IPOR were no longer active, the
+              Autopilot vaults would remain fully accessible and operational
+            </span>
           </div>
         </div>
       </div>
@@ -44,19 +60,32 @@ export function SecurityRiskManagement() {
         <div className="space-y-4 text-lg text-gray-700 leading-relaxed">
           <div className="flex items-start">
             <CheckCircle className="w-5 h-5 mr-3 mt-0.5 text-[#22c55e] flex-shrink-0" />
-            <span>Reallocation decisions are made solely by the algorithm, with no manual or multi-sig interference</span>
+            <span>
+              Reallocation decisions are made solely by the algorithm, with no
+              manual or multi-sig interference
+            </span>
           </div>
           <div className="flex items-start">
             <CheckCircle className="w-5 h-5 mr-3 mt-0.5 text-[#22c55e] flex-shrink-0" />
-            <span>Allocation routing and auto-compounding events are handled by audited and transparent smart contracts</span>
+            <span>
+              Allocation routing and auto-compounding events are handled by
+              audited and transparent smart contracts
+            </span>
           </div>
           <div className="flex items-start">
             <CheckCircle className="w-5 h-5 mr-3 mt-0.5 text-[#22c55e] flex-shrink-0" />
-            <span>High-frequency allocation is performed only within the same chain to eliminate bridge latency and exploit risks</span>
+            <span>
+              High-frequency allocation is performed only within the same chain
+              to eliminate bridge latency and exploit risks
+            </span>
           </div>
           <div className="flex items-start">
             <CheckCircle className="w-5 h-5 mr-3 mt-0.5 text-[#22c55e] flex-shrink-0" />
-            <span>The initial Autopilot product line is performance-optimized, meaning liquidity can be routed entirely into a single Morpho vault if that is the most favorable option</span>
+            <span>
+              The initial Autopilot product line is performance-optimized,
+              meaning liquidity can be routed entirely into a single Morpho
+              vault if that is the most favorable option
+            </span>
           </div>
         </div>
       </div>
@@ -75,24 +104,27 @@ export function SecurityRiskManagement() {
 
           <div className="ml-8 space-y-4 leading-relaxed">
             <p>
-              Autopilot connects to Morpho vaults that have been approved and listed on Morpho&apos;s flagship app.
+              Autopilot connects to Morpho vaults that have been approved and
+              listed on Morpho&apos;s flagship app.
             </p>
             <p>
-              These vaults have already passed Morpho&apos;s own due-diligence process before being made available to users.
+              These vaults have already passed Morpho&apos;s own due-diligence
+              process before being made available to users.
             </p>
             <p>
-              From this pre-vetted selection, Autopilot adds an additional layer of review for yield potential, liquidity depth, and risk profile before integrating them into its strategies.
+              From this pre-vetted selection, Autopilot adds an additional layer
+              of review for yield potential, liquidity depth, and risk profile
+              before integrating them into its strategies.
             </p>
             <p>
-              By building on Morpho&apos;s own approved vaults and applying its own checks, Autopilot offers users a higher degree of confidence that allocations are made into strategies meeting strong security and eligibility standards.
+              By building on Morpho&apos;s own approved vaults and applying its
+              own checks, Autopilot offers users a higher degree of confidence
+              that allocations are made into strategies meeting strong security
+              and eligibility standards.
             </p>
           </div>
-
-
         </div>
       </div>
-
-
     </div>
   );
 }

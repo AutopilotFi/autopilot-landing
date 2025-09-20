@@ -23,7 +23,8 @@ export default function Footer() {
                   <a
                     href="https://demo.autopilot.finance/"
                     target="_blank"
-                    className="text-[#9159FF]">
+                    className="text-[#9159FF]"
+                  >
                     Demo Account
                   </a>
                 </li>
@@ -66,12 +67,14 @@ export default function Footer() {
               <h4 className="font-medium mb-4">Community</h4>
               <ul className="space-y-2 text-sm">
                 <li>
-                  <div className="text-muted-foreground">
-                    Discord
-                  </div>
+                  <div className="text-muted-foreground">Discord</div>
                 </li>
                 <li>
-                  <a href="https://x.com/Autopilot_fi" target="_blank" className="text-[#9159FF] hover:text-[#7c3aed] transition-colors">
+                  <a
+                    href="https://x.com/Autopilot_fi"
+                    target="_blank"
+                    className="text-[#9159FF] hover:text-[#7c3aed] transition-colors"
+                  >
                     X (Twitter)
                   </a>
                 </li>
@@ -83,18 +86,36 @@ export default function Footer() {
               <h4 className="font-medium mb-4">Terms of Service</h4>
               <ul className="space-y-2 text-sm">
                 <li>
-                  <Link href="/about#privacy-policy" className="text-[#9159FF] hover:text-[#7c3aed] transition-colors">
+                  <Link
+                    href="/about#privacy-policy"
+                    className="text-[#9159FF] hover:text-[#7c3aed] transition-colors"
+                  >
                     Privacy Policy
                   </Link>
                 </li>
                 <li>
-                  <Link href="/about#terms-of-service" className="text-[#9159FF] hover:text-[#7c3aed] transition-colors">Terms of Service</Link>
+                  <Link
+                    href="/about#terms-of-service"
+                    className="text-[#9159FF] hover:text-[#7c3aed] transition-colors"
+                  >
+                    Terms of Service
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/about#risk-disclosures" className="text-[#9159FF] hover:text-[#7c3aed] transition-colors">Risk Disclosures</Link>
+                  <Link
+                    href="/about#risk-disclosures"
+                    className="text-[#9159FF] hover:text-[#7c3aed] transition-colors"
+                  >
+                    Risk Disclosures
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/about#security" className="text-[#9159FF] hover:text-[#7c3aed] transition-colors">Security & Risk</Link>
+                  <Link
+                    href="/about#security"
+                    className="text-[#9159FF] hover:text-[#7c3aed] transition-colors"
+                  >
+                    Security & Risk
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -104,21 +125,28 @@ export default function Footer() {
           <div className="border-t border-border pt-8">
             <div className="bg-muted/30 rounded-lg p-4 mb-6">
               <p className="text-xs text-muted-foreground leading-relaxed">
-                <strong>Important Disclaimer:</strong> Autopilot.Finance is not a financial advisor.
-                All yield optimization strategies involve risk, and past performance does not guarantee future results.
-                The automated allocation algorithms are provided as-is without warranty. Users should conduct their own
-                research and consider their risk tolerance before depositing funds. Smart contract risks, protocol risks,
-                and market volatility may result in loss of principal. By using this service, you acknowledge these risks
-                and agree that Autopilot.Finance is not liable for any losses incurred.
+                <strong>Important Disclaimer:</strong> Autopilot.Finance is not
+                a financial advisor. All yield optimization strategies involve
+                risk, and past performance does not guarantee future results.
+                The automated allocation algorithms are provided as-is without
+                warranty. Users should conduct their own research and consider
+                their risk tolerance before depositing funds. Smart contract
+                risks, protocol risks, and market volatility may result in loss
+                of principal. By using this service, you acknowledge these risks
+                and agree that Autopilot.Finance is not liable for any losses
+                incurred.
               </p>
             </div>
 
             <div className="flex flex-col md:flex-row justify-between items-center text-sm text-muted-foreground">
-              <div>
-                © 2025 Autopilot.Finance. All rights reserved.
-              </div>
+              <div>© 2025 Autopilot.Finance. All rights reserved.</div>
               <div className="flex space-x-6 mt-4 md:mt-0">
-                <a href="#cookies" className="text-[#9159FF] hover:text-[#7c3aed] transition-colors">Cookie Policy</a>
+                <a
+                  href="#cookies"
+                  className="text-[#9159FF] hover:text-[#7c3aed] transition-colors"
+                >
+                  Cookie Policy
+                </a>
               </div>
             </div>
           </div>
